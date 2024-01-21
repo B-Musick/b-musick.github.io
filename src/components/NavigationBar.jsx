@@ -20,11 +20,11 @@ function NavigationBar() {
     });
 
     return (
-        <nav className="flex text-sm items-center p-2 m-10 rounded-full bg-white/5 fixed w-fit z-[1]">
+        <nav className="flex text-sm items-center p-2 m-10 rounded-full bg-white/5 fixed w-fit z-[10] text-white backdrop-opacity-95 backdrop-invert">
             <NavigationBarLink classes="group" link={{ label: "Work", path: "/" }} activeFunction={toggleWorkButtons} />
-            <div ref={workButtons}>
+            <div ref={workButtons} className="flex flex-col sm:flex-row">
                 <NavLink to="#complete" className="group-focus:block font-light text-xs focus:text-teal-200 focus:opacity-30 p-2 rounded-full">Complete</NavLink>
-                <NavLink className="group-focus:block font-light text-xs focus:text-teal-200 focus:opacity-30 rounded-full p-2 rounded-full" to="#in-progress" >In Progress</NavLink>
+                <NavLink className="group-focus:block font-light text-xs focus:text-teal-200 focus:opacity-30 rounded-full p-2 rounded-full" to="#in-progress" >Progress</NavLink>
             </div>
 
             {renderedLinks}
