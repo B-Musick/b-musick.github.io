@@ -38,8 +38,8 @@ function Carousel({items, itemVariants, itemLocations, itemStyle, indices, carou
                     />
                 })}
                 <div className="flex h-[21em] w-96 justify-between">
-                    <button onClick={handlePrev} className="self-start z-10 h-full w-20" />
-                    <button onClick={handleNext} className="justify-self-end self-end z-10 h-full w-20" />
+                    <button onClick={handlePrev} className="self-start z-8 h-full w-20" />
+                    <button onClick={handleNext} className="justify-self-end self-end z-8 h-full w-20" />
                 </div>
             </div>
         </>

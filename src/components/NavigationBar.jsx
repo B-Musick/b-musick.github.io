@@ -7,7 +7,7 @@ function NavigationBar() {
 
     const links = [
         { label: "About", path: "/about" },
-        { label: "Technology", path: "/technology" },
+        { label: "Resume", path: "/resume" },
         { label: "Blog", path: "/blog" },
     ]
 

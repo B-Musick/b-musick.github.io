@@ -6,3 +6,8 @@ https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-bac
 
 # Flexbox
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+# Tailwind config
+Had to add configuration for inner html styling
+https://tailwindcss.com/docs/content-configuration
+https://stackoverflow.com/questions/74518155/in-tailwind-css-how-to-style-elements-while-using-dangerouslysetinnerhtml-in-re
