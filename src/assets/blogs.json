@@ -1,38 +1,7 @@
 {
-    "blogs":[
-        {
-            "title":"Google SEO",
-            "snippet":"Implementing this it is improving websites",
-            "date":"January 20, 2022",
-            "text":[
-                "This is paragraph 1",
-                "This is paragraph 2",
-                "<code class='text-sm italic bg-teal-200'>Test</code>"
-            ]
-        },
-        {
-            "title": "Google SEO",
-            "snippet": "Implementing this it is improving websites",
-            "date": "24-01-21",
-            "text": [
-                "This is paragraph 1"
-            ]
-        },
-        {
-            "title": "Google SEO",
-            "snippet": "Implementing this it is improving websites",
-            "date": "24-01-21",
-            "text": [
-                "This is paragraph 1"
-            ]
-        },
-        {
-            "title": "Google SEO",
-            "snippet": "Implementing this it is improving websites",
-            "date": "24-01-21",
-            "text": [
-                "This is paragraph 1"
-            ]
-        }
+    "filenames": [
+        "test-blog.md",
+        "test-blog-2.md"
     ]
 }
+

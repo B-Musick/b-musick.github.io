@@ -11,7 +11,6 @@ import Socials from './components/Socials';
 
 function App() {
   return (
-    <header>
       <div className="flex justify-center">
         {/* Fragment */}
         <Router>
@@ -34,7 +33,6 @@ function App() {
           </Routes>
         </Router>
       </div>
-    </header>
   )
 }
 
