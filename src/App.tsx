@@ -8,15 +8,20 @@ import ResumePage from './pages/ResumePage';
 import NavigationBar from './components/NavigationBar';
 import ScrollToAnchor from './ScrollToAnchor';
 import Socials from './components/Socials';
+import { useState } from 'react';
+import { ThemeContext } from './context/ThemeContext'
 
 function App() {
+  const [isLight, setIsLight] = useState(true);
+
   return (
-      <div className="flex justify-center">
+    <ThemeContext.Provider value={{isLight, setIsLight}}>
+      <div className={`flex justify-center ${!isLight && 'dark'}`}>
         {/* Fragment */}
         <Router>
           <ScrollToAnchor />
           <NavigationBar />
-          <Socials linkedin="www.linkedin.com/in/brendanmusick     " github=""/>
+          <Socials linkedin="www.linkedin.com/in/brendanmusick" github=""/>
           <Routes>
             {/* Make sure only one route shown at a time */}
             {/* Content inswitch depends on the route */}
@@ -33,6 +38,7 @@ function App() {
           </Routes>
         </Router>
       </div>
+    </ThemeContext.Provider>
   )
 }
 

@@ -13,7 +13,7 @@ function ResumePage(){
     }
     return (
         <div className="h-screen w-full bg-gradient-to-br from-cyan-700 to-blue-900 font-roboto text-teal-200 flex justify-center items-center">
-            <div className="h-3/5 w-3/8">
+            <div className="h-3/5 w-3/8 flex flex-col items-center">
                 <ResumeCard job={jobs}/>
             </div>
         </div>

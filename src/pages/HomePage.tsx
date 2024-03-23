@@ -34,10 +34,10 @@ function HomePage() {
 
     return (
         <main className="w-full">
-            <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 font-lobster text-teal-200 flex justify-center items-center">
+            <div className="h-screen bg-gradient-to-br dark:from-cyan-900 dark:to-gray-900 from-cyan-700 to-blue-900 font-lobster text-teal-200 flex justify-center items-center">
                 <h1 className="text-5xl m-10">Hello friend. <br /> I'm Brendan Musick, <br />Full Stack Developer. </h1>
             </div>
-            <div className="h-screen bg-gradient-to-bl from-blue-900 to-cyan-700 flex flex-col justify-center items-center text-white" id="complete">
+            <div className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex flex-col justify-center items-center text-white" id="complete">
                 <Carousel 
                     items={projects} 
                     itemVariants={projectVariants} 
@@ -48,7 +48,7 @@ function HomePage() {
                     CarouselItem={CarouselCard}
                 />
             </div>
-            <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 flex justify-center items-center text-white" id="in-progress">
+            <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900 flex justify-center items-center text-white" id="in-progress">
                 <Carousel
                     items={projects}
                     itemVariants={projectVariants}

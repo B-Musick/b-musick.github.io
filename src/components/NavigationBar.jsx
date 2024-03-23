@@ -1,8 +1,13 @@
 import { NavLink } from "react-router-dom";
 import NavigationBarLink from './NavigationBarLink';
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 
 function NavigationBar() {
+    const { isLight, setIsLight } = useContext(ThemeContext);
+
     const workButtons = useRef(null);
 
     const links = [
@@ -28,6 +33,7 @@ function NavigationBar() {
             </div>
 
             {renderedLinks}
+            <button class="rounded-full p-2 m-2 hover:bg-slate-400" onClick={()=>setIsLight(!isLight)}>{isLight ? <MdDarkMode />: <MdLightMode />}</button>
         </nav >
     )
 }
