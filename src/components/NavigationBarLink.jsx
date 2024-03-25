@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 import { useRef } from "react";
 
 function NavigationBarLink({link, classes, activeFunction}) {
-    const navLinkClasses = "flex px-4 py-2 font-bold hover:text-slate-500 rounded-full";
+    const navLinkClasses = "flex px-4 py-2 font-bold hover:bg-slate-600 rounded-full";
 
     const focusButton = () => {
         if(activeFunction) activeFunction(link.path);

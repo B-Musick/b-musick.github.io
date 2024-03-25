@@ -11,3 +11,10 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 Had to add configuration for inner html styling
 https://tailwindcss.com/docs/content-configuration
 https://stackoverflow.com/questions/74518155/in-tailwind-css-how-to-style-elements-while-using-dangerouslysetinnerhtml-in-re
+
+# Markdown
+https://dev.to/anobjectisa/how-to-dynamically-load-markdown-files-in-react-markdown-to-jsx-53fl
+https://www.markdownguide.org/extended-syntax/
+
+# Context for dark and light mode
+https://www.freecodecamp.org/news/context-api-in-react/

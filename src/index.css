@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#blog-content a {
+    color: rgb(47, 136, 180)
+}
