@@ -21,7 +21,7 @@ function BlogPage(){
     
     return (
         <main className="w-full">
-            <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 font-lobster text-teal-200 flex pt-28 justify-around overflow-scroll flex-wrap p-10">
+            <div className="h-screen font-lobster text-teal-200 flex pt-28 justify-around overflow-scroll flex-wrap p-10">
                 {blogs}
             </div>
         </main>
