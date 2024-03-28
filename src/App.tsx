@@ -18,13 +18,13 @@ function App() {
     <ThemeContext.Provider value={{isLight, setIsLight}}>
       <div className={`h-screen w-full ${!isLight && 'dark'}`}>
         <div className={`
-          h-screen
+          h-full
           flex 
           justify-center 
           bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900`}
         >
           {/* Fragment */}
-          <Router basename='/portfolio-react/'>
+          <Router>
             <ScrollToAnchor />
             <NavigationBar />
             <Socials linkedin="https://www.linkedin.com/in/brendanmusick" github="https://github.com/B-Musick"/>
