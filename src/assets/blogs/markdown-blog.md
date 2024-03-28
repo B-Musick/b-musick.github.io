@@ -2,7 +2,7 @@
 title: "Making of my Blog"
 subtitle: "subtitle of blog"
 date: "Real date"
-image: "/imgs/markdown.png"
+image: "./src/assets/imgs/blogs/markdown.png"
 categories: "react, programming"
 ---
 # Making of my Blog

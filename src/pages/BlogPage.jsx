@@ -8,7 +8,7 @@ function BlogPage(){
     const blogs = filenames.map((filename, index)=>{
         const fileSrc = `../../src/assets/blogs/${filename}`;
         const [post, metadata] = useFetchFileData(fileSrc);
-        console.log(metadata)
+        
         return (
             <Link 
                 to={{pathname: `/blog/${filename.split('.')[0]}`}}

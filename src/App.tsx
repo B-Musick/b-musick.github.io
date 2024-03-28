@@ -24,7 +24,7 @@ function App() {
           bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900`}
         >
           {/* Fragment */}
-          <Router>
+          <Router basename='/portfolio-react/'>
             <ScrollToAnchor />
             <NavigationBar />
             <Socials linkedin="https://www.linkedin.com/in/brendanmusick" github="https://github.com/B-Musick"/>
