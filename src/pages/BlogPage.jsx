@@ -1,6 +1,6 @@
 import BlogCard from '../components/BlogCard';
 import { Link } from 'react-router-dom';
-import { filenames } from '../assets/blogs.json'
+import { filenames } from '../assets/data.json'
 
 import useFetchFileData from '../hooks/useFetchFileData';
 
@@ -20,7 +20,7 @@ function BlogPage(){
     });
     
     return (
-        <main className="w-full">
+        <main className="w-full h-full">
             <div className="h-screen font-lobster text-teal-200 flex pt-28 justify-around overflow-scroll flex-wrap p-10">
                 {blogs}
             </div>

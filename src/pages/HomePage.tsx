@@ -1,18 +1,49 @@
 import Carousel from '../components/Carousel';
+import { 
+    fitness_images, 
+    fitness_captions, 
+    matrix_calc_images, 
+    matrix_calc_captions, 
+    rootedinnature_images, 
+    rootedinnature_captions,
+    protec_images,
+    protec_captions
+} from '../assets/data.json'
+
+// import images from '../assets/imgs/fitness_app'
 import rin from '../assets/imgs/rin.png';
-import fitness from '../assets/imgs/fitness.png';
 import CarouselCard from "../components/CarouselCard";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import Modal from '../components/Modal';
+import { useState } from 'react';
+import { Project } from '../lib/types';
+import ProjectGallery from '../views/ProjectGallery';
 
 function HomePage() {
+    
+    const fitnessImages = fitness_images.map(img=> `/src/assets/imgs/fitness_app/${img}`);
+    const matrixCalcImages = matrix_calc_images.map(img=> `/src/assets/imgs/matrix_calculator/${img}`);
+    const rootedinnatureImages = rootedinnature_images.map(img=> `/src/assets/imgs/rootedinnature/${img}`);
+    const protecImages = protec_images.map(img=> `/src/assets/imgs/protec/${img}`);
+
+    const [showModal, setShowModal] = useState(false);
+    const [modalContent, setModalContent] = useState<Project>({} as Project);
+
     const location = useLocation();
     const indices = [0, 1, 2]
     const projects = [
-        { name: "RootedInNature", image: rin, githubLink: 'https://github.com/B-Musick/sqr_rooted_in_nature' },
-        { name: "Fitness App", image: fitness },
-        { name: "LUME Assistant UI" },
+        { name: "Fitness App", image: fitnessImages[0], githubLink: 'https://github.com/B-Musick/sqr_rooted_in_nature', imageGallery: fitnessImages, captions: fitness_captions,
+            classes: 'flex justify-center', childClasses: 'w-1/2 flex justify-center' 
+        },
+        { name: "Matrix Calculator", image: matrixCalcImages[2], githubLink: 'https://github.com/B-Musick/sqr_rooted_in_nature', imageGallery: matrixCalcImages, captions: matrix_calc_captions },
+        { name: "Rooted In Nature", image: rootedinnatureImages[0], githubLink: 'https://github.com/B-Musick/sqr_rooted_in_nature', imageGallery: rootedinnatureImages, captions: rootedinnature_captions },
+    ]
+
+    const work = [
+        { name: "Protec", image: protecImages[0], githubLink: 'https://github.com/B-Musick/sqr_rooted_in_nature', imageGallery: protecImages, captions: protec_captions },
+
     ]
 
     const projectVariants = {
@@ -28,6 +59,24 @@ function HomePage() {
     ]
 
     const projectStyle = { width: '15em', height: "18em", position: 'absolute', backgroundImage: '', backgroundSize: 'cover' }
+
+    const handleModalOpen = (modalValue:Project) => {
+        console.log(modalValue)
+        setModalContent(modalValue);
+        setShowModal(true);
+    }
+
+    const handleModalClose = () => {
+        setShowModal(false);
+    }
+
+    // const actionBar = <div className='bg-gray-100 my-4 mx-14 rounded-xl w-full p-2'><button onClick={handleModalClose}>Accept</button></div>;
+    const actionBar = ""
+
+    const modal = <Modal classes={modalContent.classes} childClasses={modalContent.childClasses} className="z-[0]" onClose={handleModalClose} actionBar={actionBar}>
+        {/* receive children prop in Modal */}
+        <ProjectGallery modalContent={modalContent}/>
+    </Modal>;
 
     return (
         <main className="w-full">
@@ -49,6 +98,7 @@ function HomePage() {
                     indices={indices}
                     carouselTitle="Projects"
                     CarouselItem={CarouselCard}
+                    modalAction={handleModalOpen}
                 />
                 <Link 
                     className={`animate-bounce absolute bottom-0 w-10 h-10 mb-5  ${location.hash == '#complete' ? '':'hidden'}`}
@@ -59,15 +109,17 @@ function HomePage() {
             </div>
             <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900 flex justify-center items-center text-white" id="in-progress">
                 <Carousel
-                    items={projects}
+                    items={work}
                     itemVariants={projectVariants}
                     itemLocations={positions}
                     itemStyle={projectStyle}
-                    indices={indices}
+                    indices={[0]}
                     carouselTitle="In Progress"
                     CarouselItem={CarouselCard}
+                    modalAction={handleModalOpen}
                 />
             </div>
+            {showModal && modal}
         </main>
     )
 }

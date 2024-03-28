@@ -3,7 +3,7 @@
  */
 import { useState } from "react";
 
-function Carousel({items, itemVariants, itemLocations, itemStyle, indices, carouselTitle, CarouselItem}){
+function Carousel({items, itemVariants, itemLocations, itemStyle, indices, carouselTitle, CarouselItem, modalAction}){
     const [itemIndexes, setItemIndexes] = useState(indices);
 
     const handlePrev = () => {
@@ -25,7 +25,7 @@ function Carousel({items, itemVariants, itemLocations, itemStyle, indices, carou
 
     return (
         <>
-            <div className="flex items-center flex-col justify-center relative w-full h-full">
+            <div className="flex items-center flex-col justify-center relative w-full h-full z-[0]">
                 <div className="mb-[3em] font-lobster text-teal-600 text-3xl">{carouselTitle}</div>
 
                 {items.map((item, index)=>{
@@ -35,6 +35,7 @@ function Carousel({items, itemVariants, itemLocations, itemStyle, indices, carou
                         itemVariants={itemVariants} 
                         animatedItem={itemLocations[itemIndexes[index]]} 
                         itemStyle={itemStyle}
+                        clickCard={modalAction}
                     />
                 })}
                 <div className="flex h-[21em] w-96 justify-between">
