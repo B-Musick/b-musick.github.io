@@ -13,11 +13,16 @@ import { ThemeContext } from './context/ThemeContext'
 
 function App() {
   const [isLight, setIsLight] = useState(true);
-
+  console.log(window.location.href.includes('blog'))
   return (
     <ThemeContext.Provider value={{isLight, setIsLight}}>
-      <div className={`h-full w-full ${!isLight && 'dark'}`}>
-        <div className="h-full flex justify-center bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900">
+      <div className={`h-screen w-full ${!isLight && 'dark'}`}>
+        <div className={`
+          h-full
+          flex 
+          justify-center 
+          bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900`}
+        >
           {/* Fragment */}
           <Router>
             <ScrollToAnchor />

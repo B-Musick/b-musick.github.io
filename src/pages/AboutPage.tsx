@@ -2,8 +2,8 @@ import headshot from '../assets/imgs/headshot.jpeg';
 
 function AboutPage() {
     return (
-        <main className="h-screen">
-            <div className="flex flex-col md:flex-row items-center justify-center h-fit w-screen">
+        <main className='h-full'>
+            <div className="flex flex-col md:flex-row items-center justify-center w-screen">
                 <div className="pl-10 md:w-1/2 mt-36 justify-center flex">
                     <img src={headshot} className='object-cover h-60 w-48 rounded-full'/>
                 </div>

@@ -51,7 +51,7 @@ function ResumePage(){
 
     return (
         <div className="py-36 w-full font-roboto text-teal-200 flex justify-center items-center">
-            <div className="h-screen flex flex-col items-center max-w-[1000px]">
+            <div className="flex flex-col items-center max-w-[1000px]">
                 <ResumeCard job={jobs} classes="min-[520px]:w-[70%] md:w-[60%]"/>
                 <ResumeCard job={selfEmployment} classes="min-[520px]:w-[70%] md:w-[60%]">
                     <ResumeCard job={homeStretchTherapy} />

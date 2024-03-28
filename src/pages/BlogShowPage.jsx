@@ -23,8 +23,8 @@ function BlogShowPage() {
     }
 
     return (
-        <div className="w-full h-full flex justify-center bg-gradient-to-br dark:from-cyan-900 dark:to-gray-900 from-cyan-700 to-blue-900">
-            <div id="blog-content" className="max-w-[650px] w-full dark:text-white flex flex-col justify-start sm:m-8 sm:mt-36 dark:bg-white/20 bg-white/85">
+        <div className="h-fit w-full flex justify-center bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900 overflow-scroll">
+            <div id="blog-content" className="max-w-[650px] w-full text-[8px] sm:text-sm dark:text-white flex flex-col justify-start sm:m-8 sm:mt-36 dark:bg-white/20 bg-white/85">
                 <img src={metadata.image} alt="test" className="w-full h-96" style={{borderRadius: '0 0 100% 100%/40px'}} />
 
                 <Markdown className="w-full p-5" options={{ 
