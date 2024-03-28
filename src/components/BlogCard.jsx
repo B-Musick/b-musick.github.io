@@ -1,4 +1,4 @@
-import FloaterCard from '../components/FloaterCard';
+import FloaterCard from './FloaterCard';
 
 function BlogCard({key, metadata, blog, classes}){
     const classNames = `${classes} drop-shadow-xl grid rounded-3xl p-3 w-[250px] h-[160px] text-white my-4`;
