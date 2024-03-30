@@ -2,14 +2,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import BlogPage from './pages/BlogPage';
-import BlogShowPage from './pages/BlogShowPage';
-import ResumePage from './pages/ResumePage';
-import NavigationBar from './components/NavigationBar';
+import BlogPage from './pages/BlogPage.tsx';
+import BlogShowPage from './pages/BlogShowPage.tsx';
+import ResumePage from './pages/ResumePage.tsx';
+import NavigationBar from './components/NavigationBar.tsx';
 import ScrollToAnchor from './ScrollToAnchor';
-import Socials from './components/Socials';
+import Socials from './components/Socials.tsx';
 import { useState } from 'react';
-import { ThemeContext } from './context/ThemeContext'
+import { ThemeContext } from './context/ThemeContext.tsx'
 
 function App() {
   const [isLight, setIsLight] = useState(true);

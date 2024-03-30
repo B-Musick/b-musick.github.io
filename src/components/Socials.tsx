@@ -1,7 +1,9 @@
+import React from "react";
+import { SocialsProps } from "../lib/types";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 
-function Socials({github, linkedin}) {
+const Socials: React.FC<SocialsProps> = ({github, linkedin}) => {
     return (
         <div className="flex fixed bottom-8 right-8 flex-col text-white z-[10]">
             <a href={linkedin}>

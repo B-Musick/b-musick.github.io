@@ -1,7 +1,9 @@
 import ReactDOM from 'react-dom';
 import { useEffect } from 'react';
+import React from 'react';
+import { ModalProps }  from '../lib/types';
 
-function Modal({ onClose, children, actionBar, item, classes, childClasses }){
+const Modal: React.FC<ModalProps> = ({ onClose, children, actionBar, item, classes, childClasses }) => {
     useEffect(()=>{
         document.body.classList.add('overflow-hidden');
     

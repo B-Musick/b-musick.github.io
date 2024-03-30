@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import NavigationBarLink from './NavigationBarLink';
+import NavigationBarLink from './NavigationBarLink.tsx';
 import { useRef, useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { ThemeContext } from "../context/ThemeContext.tsx";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import { useLocation } from "react-router-dom";

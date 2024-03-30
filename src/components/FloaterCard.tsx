@@ -1,4 +1,7 @@
-function FloaterCard({skill}){
+import React from "react";
+import { FloaterCardProps } from "../lib/types";
+
+const FloaterCard: React.FC<FloaterCardProps> = ({skill}) =>{
     return (
         <div className="flex text-xs items-center px-2 my-1 rounded-full bg-white/5 w-fit text-black backdrop-opacity-95 backdrop-invert mr-1">
             {skill}

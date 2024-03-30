@@ -1,9 +1,11 @@
+import React from "react";
+import { ResumeCardProps } from "../lib/types";
 import FloaterCard from "./FloaterCard";
 import { TbWorld } from "react-icons/tb";
 
-function ResumeCard({job, children, classes}){
+const ResumeCard: React.FC<ResumeCardProps> = ({job, children, classes}) => {
     const {company, title, startMonth, startYear, endMonth, endYear, description, skills, link} = job;
-    console.log(title);
+    
     return (
         <div className={`flex flex-col text-white hover:bg-white/5 p-4 rounded-md ${classes}`}>
             <div className="flex pl-4 flex-wrap w-full">

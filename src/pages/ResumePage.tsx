@@ -1,4 +1,4 @@
-import ResumeCard from "../components/ResumeCard";
+import ResumeCard from "../components/ResumeCard.tsx";
 
 function ResumePage(){
     const jobs = {

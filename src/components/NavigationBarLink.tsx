@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom"
-import { useRef } from "react";
+import React, { useRef } from "react";
+import { NavigationBarLinkProps } from "../lib/types";
 
-function NavigationBarLink({link, classes, activeFunction}) {
+const NavigationBarLink: React.FC<NavigationBarLinkProps> = ({link, classes, activeFunction}) => {
     const navLinkClasses = "flex px-4 py-2 font-bold hover:bg-slate-600 rounded-full";
 
     const focusButton = () => {

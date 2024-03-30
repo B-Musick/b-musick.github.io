@@ -1,14 +1,14 @@
 // Fix for import issue - https://stackoverflow.com/questions/73459654/import-markdown-files-dynamically-with-vite
 import { useParams, useLocation } from 'react-router-dom';
 import Markdown from 'markdown-to-jsx'
-import Code from '../components/blog/Code';
-import Header from '../components/blog/Header';
-import Paragraph from '../components/blog/Paragraph';
-import SubSubHeader from '../components/blog/SubSubHeader';
-import SubHeader from '../components/blog/SubHeader';
-import UnorderedList from '../components/blog/UnorderedList';
-import useFetchFileData from '../hooks/useFetchFileData';
-import Blockquote from '../components/blog/Blockquote';
+import Code from '../components/blog/Code.tsx';
+import Header from '../components/blog/Header.tsx';
+import Paragraph from '../components/blog/Paragraph.tsx';
+import SubSubHeader from '../components/blog/SubSubHeader.tsx';
+import SubHeader from '../components/blog/SubHeader.tsx';
+import UnorderedList from '../components/blog/UnorderedList.tsx';
+import useFetchFileData from '../hooks/useFetchFileData.tsx';
+import Blockquote from '../components/blog/Blockquote.tsx';
 
 function BlogShowPage() {    
     const params = useParams();

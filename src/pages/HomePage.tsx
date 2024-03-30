@@ -1,4 +1,6 @@
-import Carousel from '../components/Carousel';
+
+import Carousel from '../components/Carousel.tsx';
+
 import { 
     fitness_images, 
     fitness_captions, 
@@ -10,13 +12,11 @@ import {
     protec_captions
 } from '../assets/data.json'
 
-// import images from '../assets/imgs/fitness_app'
-import rin from '../assets/imgs/rin.png';
-import CarouselCard from "../components/CarouselCard";
+import CarouselCard from "../components/CarouselCard.tsx";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import Modal from '../components/Modal';
+import Modal from '../components/Modal.tsx';
 import { useState } from 'react';
 import { Project } from '../lib/types';
 import ProjectGallery from '../views/ProjectGallery';
@@ -29,7 +29,9 @@ function HomePage() {
     const protecImages = protec_images.map(img=> `./src/assets/imgs/protec/${img}`);
 
     const [showModal, setShowModal] = useState(false);
+    // const [modalContent, setModalContent] = useState<Project>({} as Project);
     const [modalContent, setModalContent] = useState<Project>({} as Project);
+
 
     const location = useLocation();
     const indices = [0, 1, 2]

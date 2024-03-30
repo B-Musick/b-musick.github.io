@@ -1,8 +1,8 @@
-import BlogCard from '../components/BlogCard';
+import BlogCard from '../components/BlogCard.tsx';
 import { Link } from 'react-router-dom';
 import { filenames } from '../assets/data.json'
 
-import useFetchFileData from '../hooks/useFetchFileData';
+import useFetchFileData from '../hooks/useFetchFileData.tsx';
 
 function BlogPage(){
     const blogs = filenames.map((filename, index)=>{

@@ -2,8 +2,11 @@
  * Source: https://www.youtube.com/watch?v=RMTdoi_5sAA
  */
 import { useState } from "react";
+import React from 'react';
 
-function Carousel({items, itemVariants, itemLocations, itemStyle, indices, carouselTitle, CarouselItem, modalAction}){
+import { CarouselProps } from "../lib/types";
+
+const Carousel: React.FC<CarouselProps> = ({items, itemVariants, itemLocations, itemStyle, indices, carouselTitle, CarouselItem, modalAction}) => {
     const [itemIndexes, setItemIndexes] = useState(indices);
 
     const handlePrev = () => {

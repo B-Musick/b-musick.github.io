@@ -1,6 +1,8 @@
+import React from 'react';
+import { BlogCardProps } from '../lib/types';
 import FloaterCard from './FloaterCard';
 
-function BlogCard({key, metadata, blog, classes}){
+const BlogCard: React.FC<BlogCardProps> = ({key, metadata, blog, classes}) => {
     const classNames = `${classes} drop-shadow-xl grid rounded-3xl p-3 w-[250px] h-[160px] text-white my-4`;
     const categories = Object.keys(metadata).includes('categories') ? metadata.categories.split(','): '';
 

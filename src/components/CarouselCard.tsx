@@ -1,8 +1,10 @@
+import React from "react";
+import { CarouselCardProps } from "../lib/types";
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 
-function CarouselCard({ item, key, itemVariants, animatedItem, itemStyle, clickCard }){
+const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, animatedItem, itemStyle, clickCard }) => {
     const {githubLink, name} = item;
 
     const itemStyling = {
