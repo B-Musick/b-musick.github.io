@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom"
-import React, { useRef } from "react";
 import { NavigationBarLinkProps } from "../lib/types";
 
 const NavigationBarLink: React.FC<NavigationBarLinkProps> = ({link, classes, activeFunction}) => {
@@ -11,9 +10,16 @@ const NavigationBarLink: React.FC<NavigationBarLinkProps> = ({link, classes, act
 
     return (
         <>
-            <NavLink key={link.label} onClick={focusButton} to={link.path} className={({ isActive }) =>
-                isActive ? `${classes} ${navLinkClasses} bg-sky-900/50` : `${classes} ${navLinkClasses}`
-            }>
+            <NavLink 
+                key={link.label} 
+                onClick={focusButton} 
+                to={link.path} 
+                className={({ isActive }) =>
+                    isActive ? 
+                        `${classes} ${navLinkClasses} bg-sky-900/50` : 
+                        `${classes} ${navLinkClasses}`
+                }
+            >
                 {link.label}
             </NavLink>
         </>

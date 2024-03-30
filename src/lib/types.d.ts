@@ -64,10 +64,15 @@ export type ResumeCardProps = {
 
 export type NavigationBarLinkProps = {
     link: any,
-    classes: string,
-    activeFunction: any
+    classes?: string,
+    activeFunction?: any
 }
 
 export type FloaterCardProps = {
     skill: string
+}
+
+export type ThemeContextProps = {
+    isLight: boolean,
+    setIsLight: any
 }

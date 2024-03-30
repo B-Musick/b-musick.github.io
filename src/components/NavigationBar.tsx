@@ -19,7 +19,7 @@ function NavigationBar() {
     ]
 
     const renderedLinks = links.map((link) => {
-        return <NavigationBarLink key={link.label} link={link} />
+        return <NavigationBarLink key={link.label} link={link} activeFunction={null} classes={''}/>
     });
 
     return (
@@ -31,7 +31,7 @@ function NavigationBar() {
             </div>
 
             {renderedLinks}
-            <button class="rounded-full p-2 m-2 hover:bg-slate-400" onClick={()=>setIsLight(!isLight)}>{isLight ? <MdDarkMode />: <MdLightMode />}</button>
+            <button className="rounded-full p-2 m-2 hover:bg-slate-400" onClick={()=>setIsLight(!isLight)}>{isLight ? <MdDarkMode />: <MdLightMode />}</button>
         </nav >
     )
 }

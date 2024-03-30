@@ -4,7 +4,7 @@ import FloaterCard from "./FloaterCard";
 import { TbWorld } from "react-icons/tb";
 
 const ResumeCard: React.FC<ResumeCardProps> = ({job, children, classes}) => {
-    const {company, title, startMonth, startYear, endMonth, endYear, description, skills, link} = job;
+    const {company, title, startMonth, endMonth, endYear, description, skills, link} = job;
     
     return (
         <div className={`flex flex-col text-white hover:bg-white/5 p-4 rounded-md ${classes}`}>
@@ -17,7 +17,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({job, children, classes}) => {
                 <div className="text-sm w-full">{title}</div>
                 <p className="text-sm mt-2">{description}</p>
                 <div className="mt-2 flex flex-wrap justify-between w-full">
-                    <span className="flex flex-wrap w-full">{skills.map(skill => <FloaterCard skill={skill}/> )} {link && <a className="flex grow justify-end" href={link}><TbWorld className="ml-4 mt-1" /></a>}</span>
+                    <span className="flex flex-wrap w-full">{skills.map((skill: string) => <FloaterCard skill={skill}/> )} {link && <a className="flex grow justify-end" href={link}><TbWorld className="ml-4 mt-1" /></a>}</span>
                 </div>
             </div>
             <div className="w-full">

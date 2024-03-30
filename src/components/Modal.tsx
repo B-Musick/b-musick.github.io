@@ -26,7 +26,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, children, actionBar, classes, ch
             </div>
         </div>,
         
-        document.querySelector('.modal')
+        document.querySelector('.modal')!
     )
 }
 
