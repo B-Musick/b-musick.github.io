@@ -16,7 +16,6 @@ export type ModalProps = {
     onClose: any, 
     children: any, 
     actionBar: any, 
-    item: any, 
     classes: string, 
     childClasses: string
 }
@@ -28,7 +27,6 @@ export type BlogComponentType = {
 export type BlogCardProps = {
     key: any,
     metadata: any,
-    blog: any,
     classes: any
 }
 

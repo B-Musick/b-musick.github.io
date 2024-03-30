@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import React from 'react';
 import { ModalProps }  from '../lib/types';
 
-const Modal: React.FC<ModalProps> = ({ onClose, children, actionBar, item, classes, childClasses }) => {
+const Modal: React.FC<ModalProps> = ({ onClose, children, actionBar, classes, childClasses }) => {
     useEffect(()=>{
         document.body.classList.add('overflow-hidden');
     

@@ -5,8 +5,6 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 
 const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, animatedItem, itemStyle, clickCard }) => {
-    const {githubLink, name} = item;
-
     const itemStyling = {
         ...itemStyle,
         backgroundImage: `url(${item.image})`,

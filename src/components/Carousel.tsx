@@ -10,7 +10,7 @@ const Carousel: React.FC<CarouselProps> = ({items, itemVariants, itemLocations, 
     const [itemIndexes, setItemIndexes] = useState(indices);
 
     const handlePrev = () => {
-        setItemIndexes((prevIndices) => {
+        setItemIndexes((prevIndices:number[]) => {
             const newIndices = prevIndices.map((prevIndex) => {
                 let nextIndex = (prevIndex - 1);
                 return nextIndex < 0 ? (indices.length - 1) : nextIndex % indices.length; 
@@ -20,7 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({items, itemVariants, itemLocations, 
     }
 
     const handleNext = () => {
-        setItemIndexes((prevIndices)=>{
+        setItemIndexes((prevIndices: number[])=>{
             const newIndices = prevIndices.map((prevIndex)=>(prevIndex + 1) % indices.length);
             return newIndices;
         })
@@ -31,7 +31,7 @@ const Carousel: React.FC<CarouselProps> = ({items, itemVariants, itemLocations, 
             <div className="flex items-center flex-col justify-center relative w-full h-full z-[0]">
                 <div className="mb-[3em] font-lobster text-teal-600 text-3xl">{carouselTitle}</div>
 
-                {items.map((item, index)=>{
+                {items.map((item: any, index: number)=>{
                     return <CarouselItem 
                         item={item} 
                         key={index} 
