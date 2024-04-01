@@ -18,3 +18,7 @@ https://www.markdownguide.org/extended-syntax/
 
 # Context for dark and light mode
 https://www.freecodecamp.org/news/context-api-in-react/
+
+# TODO
+    // "build": "tsc && vite build",
+add this back to package.json 
