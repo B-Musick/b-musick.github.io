@@ -23,10 +23,10 @@ import ProjectGallery from '../views/ProjectGallery';
 
 function HomePage() {
     
-    const fitnessImages = fitness_images.map(img=> `./src/assets/imgs/fitness_app/${img}`);
-    const matrixCalcImages = matrix_calc_images.map(img=> `./src/assets/imgs/matrix_calculator/${img}`);
-    const rootedinnatureImages = rootedinnature_images.map(img=> `./src/assets/imgs/rootedinnature/${img}`);
-    const protecImages = protec_images.map(img=> `./src/assets/imgs/protec/${img}`);
+    const fitnessImages = fitness_images.map(img=> `/imgs/fitness_app/${img}`);
+    const matrixCalcImages = matrix_calc_images.map(img=> `/imgs/matrix_calculator/${img}`);
+    const rootedinnatureImages = rootedinnature_images.map(img=> `/imgs/rootedinnature/${img}`);
+    const protecImages = protec_images.map(img=> `/imgs/protec/${img}`);
 
     const [showModal, setShowModal] = useState(false);
     // const [modalContent, setModalContent] = useState<Project>({} as Project);
