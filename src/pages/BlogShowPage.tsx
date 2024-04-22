@@ -19,7 +19,7 @@ function BlogShowPage() {
         ({post, metadata} = location.state);
 
     } else {
-        [post, metadata] = useFetchFileData(`../../src/assets/blogs/${params.blogId}.md`);
+        [post, metadata] = useFetchFileData(`/blogs/${params.blogId}.md`);
     }
 
     return (
