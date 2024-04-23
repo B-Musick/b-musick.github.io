@@ -1,6 +1,6 @@
 import BlogCard from '../components/BlogCard.tsx';
 import { Link } from 'react-router-dom';
-import { filenames } from '/data.json'
+import { filenames } from '/src/data.json'
 
 import useFetchFileData from '../hooks/useFetchFileData.tsx';
 
