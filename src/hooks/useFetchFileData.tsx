@@ -12,9 +12,11 @@ function useFetchFileData(filePath) {
     useEffect(() => {
         const fetchFileData = async () => {
             try {
+                console.log('file path:', filePath)
                 const file = await import(/* @vite-ignore */filePath);
                 const fileData = await fetch(file.default);
                 const fileText = await fileData.text();
+                console.log('text: ', fileText)
 
                 setPost(fileText);
                 setMetadata(matter(post).data)
