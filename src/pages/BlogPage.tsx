@@ -6,7 +6,7 @@ import useFetchFileData from '../hooks/useFetchFileData.tsx';
 
 function BlogPage(){
     const blogs = filenames.map((filename, index)=>{
-        const fileSrc = `/src/assets/blogs/${filename}`;
+        const fileSrc = `/blogs/${filename}`;
         const [post, metadata] = useFetchFileData(fileSrc);
         
         return (
