@@ -2,7 +2,7 @@ import headshot from '/imgs/headshot.jpeg';
 
 function AboutPage() {
     return (
-        <main className='h-full'>
+        <main className='absolute bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900'>
             <div className="flex flex-col md:flex-row items-center justify-center w-screen">
                 <div className="pl-10 md:w-1/2 mt-36 justify-center flex">
                     <img src={headshot} className='object-cover h-60 w-48 rounded-full'/>
