@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.md'],
-  base: 'https://b-musick.github.io/'
+  base: 'https://b-musick.github.io/#/'
 })

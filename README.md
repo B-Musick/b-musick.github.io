@@ -27,3 +27,9 @@ add this back to package.json
 - Had to change the fetch method
 
 https://stackoverflow.com/questions/67495471/cannot-load-markdown-md-inside-index-js
+
+# Switched to hash router
+- Had to switch since couldnt directly access pages
+- Will switch back if decide to host on different place
+
+https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages
