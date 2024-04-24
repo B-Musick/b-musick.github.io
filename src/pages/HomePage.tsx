@@ -10,7 +10,7 @@ import {
     rootedinnature_captions,
     protec_images,
     protec_captions
-} from '../assets/data.json'
+} from '/src/data.json'
 
 import CarouselCard from "../components/CarouselCard.tsx";
 import { BsArrowDownCircle } from "react-icons/bs";

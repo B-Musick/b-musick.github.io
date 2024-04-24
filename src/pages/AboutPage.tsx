@@ -1,4 +1,4 @@
-import headshot from '../assets/imgs/headshot.jpeg';
+import headshot from '/imgs/headshot.jpeg';
 
 function AboutPage() {
     return (
