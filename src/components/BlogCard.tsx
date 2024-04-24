@@ -18,13 +18,13 @@ const BlogCard: React.FC<BlogCardProps> = ({key, metadata, classes}) => {
                     <div className="text-2xl">
                         {metadata.title}
                     </div>
-                    <div className='italic text-xs font-roboto'>{metadata.date}</div>
+                    <div className='italic text-xs font-roboto font-black'>{metadata.date}</div>
                     {categories && <div className="mt-2 flex">
                         {categories.map((category:string) => <FloaterCard skill={category}/> )}
                     </div>}
                 </div>
             </div>
-            <div className="justify-self-start self-end font-roboto text-sm">
+            <div className="justify-self-start self-end font-roboto text-sm font-black">
                 {metadata.subtitle}
             </div>
         </div>

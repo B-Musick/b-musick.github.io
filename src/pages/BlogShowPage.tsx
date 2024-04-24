@@ -41,6 +41,11 @@ function BlogShowPage() {
                 }}>
                     {post}
                 </Markdown>
+
+                <div className='flex flex-col items-end italic mb-3 pr-8'>
+                    <div>Author: Brendan Musick</div>
+                    <div>{`Date: ${metadata.date}`}</div>
+                </div>
             </div>
         </div>
     )

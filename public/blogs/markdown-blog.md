@@ -1,7 +1,7 @@
 ---
 title: "Making of my Blog"
-subtitle: "subtitle of blog"
-date: "Real date"
+subtitle: "Creation of blog which parses from Mardown files"
+date: "24-04-2024"
 image: "/imgs/markdown.png"
 categories: "react, programming"
 ---
