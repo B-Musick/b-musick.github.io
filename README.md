@@ -22,3 +22,8 @@ https://www.freecodecamp.org/news/context-api-in-react/
 # TODO
     // "build": "tsc && vite build",
 add this back to package.json 
+
+# Fix for blog not fetching markdown dynamically
+- Had to change the fetch method
+
+https://stackoverflow.com/questions/67495471/cannot-load-markdown-md-inside-index-js
