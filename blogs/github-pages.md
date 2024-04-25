@@ -11,20 +11,22 @@ categories: "react, github, programming"
 ~Having my previous portfolio hosted on Heroku, which now costs money, I wanted to host my new website for free on Github pages. There are a few nuances to hosting a React website containing a router which I discuss among other things.
 
 - Requirements
-- React router changes
-- Set correct base in config file
-- Adding deploy File
+- React Router Changes
+- Set Correct Base in Config File
+- Adding Deploy File
 - Check Active Workflow
-- Hosting
 
 ## Requirements
 In order to host your website on Github pages, you will need a few things first. You will of course need a [Github Account]("https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github#signing-up-for-a-new-personal-account), which is free to use.
 
 You will also need to [install github locally](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). 
 
-You will then need to connect your local project to Github. [Create a new repository](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git) on Github and follow the actions shown from the command line.
+You will then need to connect your local project to Github. [Create a new repository](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git) on Github and follow the actions shown from the command line.*
 
-## Set correct base in config file
+## React Router Changes
+It should be noted that if you are using **react-router-dom**, and are using a basic **BrowserRouter**, you will need to change this to **HashRouter**. See [stackoverflow post](https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages) for more info.
+
+## Set Correct Base in Config File
 In your react-vite project. you will have to set the base config for the website in the **vite.config.js** file. Since this is my portfolio and is the base domain for github (b-musick.github.io), I just used it as the base:
 
 ```
@@ -157,6 +159,23 @@ jobs:
           path: ./dist
 ```
 
+### Checkout Repository
+When want to checkout and use the specific repo associated with the deploy script:
+
+```
+- name: Checkout repo
+  uses: actions/checkout@v2
+
+```
+
+### Setup node
+To setup and define the version for node
+```
+- name: Setup Node
+  uses: actions/setup-node@v1
+  with:
+    node-version: 21
+```
 ### Deploy the public folder
 [link](https://github.com/peaceiris/actions-gh-pages)
 
