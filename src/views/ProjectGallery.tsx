@@ -11,11 +11,11 @@ type ProjectGalleryProps = {
 function ProjectGallery({ modalContent, classes }: ProjectGalleryProps) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const handlePrev = () => {
-        setCurrentImageIndex((currentImageIndex-1) % modalContent.images.length);
+        setCurrentImageIndex((currentImageIndex-1+modalContent.images.length) % (modalContent.images.length));
     }
 
     const handleNext = () => {
-        setCurrentImageIndex((currentImageIndex+1) % modalContent.images.length);
+        setCurrentImageIndex((currentImageIndex+1) % (modalContent.images.length));
     }
 
     return (
