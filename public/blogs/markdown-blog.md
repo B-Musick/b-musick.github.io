@@ -112,3 +112,27 @@ I've decided to designate this element as the header's legend which allows a use
 
 ## useLocation
 Delve into how you had to integrate useLocation to pass the imported markdown file using the filenames listed in the json file
+
+# Skeleton
+Here is the starter skeleton for every new blog I create:
+
+```
+'---
+title: "Insert title"
+subtitle: "Insert subtitle"
+date: "date"
+image: "/imgs/{filename}"
+categories: "react, programming"
+--
+
+# Title
+
+~Introduction
+
+>This is a blockquote
+
+## subheader
+Paragraph
+
+### subsubheader
+```

@@ -36,7 +36,7 @@ function BlogShowPage() {
                         p: { component: Paragraph },
                         blockquote: {component: Blockquote},
                         code: { component: Code },
-                        ul: {component: UnorderedList},
+                        ul: {component: UnorderedList, props: {blogId: params.blogId}},
                     } 
                 }}>
                     {post}
