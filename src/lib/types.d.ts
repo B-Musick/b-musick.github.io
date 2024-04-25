@@ -5,8 +5,8 @@ export interface LinkData {
 
 export interface Project {
     name: string,
-    image: string,
-    imageGallery: Array,
+    imagePath: string,
+    images: Array,
     classes: string,
     childClasses: string,
     captions: Array<string>

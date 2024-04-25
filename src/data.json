@@ -1,92 +1,120 @@
 {
     "filenames": [
         "markdown-blog.md",
-        "test-blog-2.md"
+        "github-pages.md"
     ],
-    "fitness_images": [
-        "0_start_screen.png",
-        "1_start_screen_user_info.png",
-        "2_nav_screen.png",
-        "3_main_workout_page.png",
-        "4_main_workout_creation.png",
-        "5_new_cardio_workout.png",
-        "6_forgot_distance.png",
-        "7_after_submission.png",
-        "8_strength_workout.png",
-        "9_after_submissions.png",
-        "10_workout_history.png",
-        "11_workout_history_after_add.png",
-        "12_project_layout.png",
-        "13_test_files_layout.png",
-        "14_website.png"                                
+    "projects": [
+        {
+            "name": "Fitness App",
+            "github": "https://github.com/B-Musick/sqr_rooted_in_nature",
+            "images": [
+                "0_start_screen.png",
+                "1_start_screen_user_info.png",
+                "2_nav_screen.png",
+                "3_main_workout_page.png",
+                "4_main_workout_creation.png",
+                "5_new_cardio_workout.png",
+                "6_forgot_distance.png",
+                "7_after_submission.png",
+                "8_strength_workout.png",
+                "9_after_submissions.png",
+                "10_workout_history.png",
+                "11_workout_history_after_add.png",
+                "12_project_layout.png",
+                "13_test_files_layout.png",
+                "14_website.png" 
+            ],
+            "imagePath": "/imgs/fitness_app/",
+            "captions": [
+                "Main screen the user first encounters to login to their account or register for one. The fitness app keeps track of each users individual workouts, calorie intake, etc.", 
+                "We created a user janesmith123 to complete all our testing with.",
+                "The main navigation screen where the user can either go to create a new workout (the portion of the application which I programmed), or can go to their weight details.", 
+                "When click on the green workout button, you come to this page where the user can either create a new workout or view their history.", 
+                "Initial page shown when user wants to create new workout. They can add either cardio excersize or strength excersize to the current workout.", 
+                "Adding a new cardio excersize to the workout.", 
+                "Can see I added error handling measures in case user doesnt input some piece of data, it is handled in the logic layer and relays this information to the UI.", 
+                "After user submits the excersize it will be listed within the current workout page.", 
+                "Adding a strength workout involves the same process as a cardio workout and has error handling as well to let the user know when imporperly filled in an input.",
+                "You can see we now have a workout which contains both a cardio and a strength workout, from which an excersize can either be edited or deleted if you wish. Once complete you press the 'finish' button.",
+                "The workout is then stored with the user and can be viewed in their workout history. I was only able to complete the listing out of the workouts before we had to submit our final version of the applicaiton at end of the term.",
+                "I was responsible with creating the layout of our applications website to show off the features of our application, you can see we made a video showcasing the app, have a section for velocity metrics for how quickly we completed portions of the app, our vision statement.",
+                "This is a general look at the structure of our applications files, where we used an 'n-tier Architecture' having a business layer, database layer, presentation (UI) layer and have domain-specific objects since this project was object oriented (OOP) based and we developed these classes outlining our main objects stored in the database. The objects associated with my portion of the app were Exercise, Workout, ExerciseWorkout, Cardio and Strength",
+                "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."
+            ],
+            "classes": "flex justify-center", "childClasses": "w-1/2 flex justify-center" 
+        },
+        {
+            "name": "Matrix Calculator",
+            "github": "https://github.com/B-Musick/matrix-calculator-rebuild-react",
+            "website": "https://b-musick.github.io/matrix-calculator-rebuild-react/",
+            "images": [
+                "cofactor.png",
+                "matrix_size.png",
+                "matrix_vals.png",
+                "row_operations.png",
+                "start_page.png",
+                "submitted.png"
+            ],
+            "imagePath": "/imgs/matrix_calculator/",
+            "captions": [
+                "When page first loads, the user needs to put in the amount of matrices they will be working with.", 
+                "The next screen will then ask for the dimensions of the matrices.", 
+                "Finally, the values of the matrices will be input.", 
+                "Once submitted, you are redirected to a screen showing your matrices, a text box to submit certain calculations and on the bottom of the screen is descriptions of commands to input in the text box to perform various types of matrix calculations.", 
+                "Typing AR will bring the user to a screen where they can perform various Gaussian and Gauss-Jordan row operations on the matrices, and the elementary matrices can be shown or not.", 
+                "If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."
+            ]
+        },
+        {
+            "name": "Rooted In Nature",
+            "github": "https://github.com/B-Musick/sqr_rooted_in_nature",
+            "website": "",
+            "images": [
+                "rin.png",
+                "after_filter.png",
+                "dropdown.png",
+                "json_test.png",
+                "keys_home_after_add.png",
+                "key_tooltip.png",
+                "test_key_end.png",
+                "upload_json.png",
+                "before_filter.png",
+                "key.png",
+                "owner_plant.png",
+                "test_key.png",
+                "user_login_collection.png"
+            ],
+            "imagePath": "/imgs/rootedinnature/",
+            "captions": [
+                "Homepage, where there is the main header which contains all the page links and routes, as well as capabilities for users to register and login.", 
+                "Dropdowns I implemented with Javascript, allowing a user to create and view plants for their collection, as well as different plant keys that are accessible. It can be seen that I have logged in and it shows my username 'Brendan' now in green where the login button was, and there is now a logout button where the 'register' button used to be.", 
+                "Plant Collection page where users collected plants are be shown. When the user hovers over the image it shows some of the plants details, and the user can click the image to be redirected to a page showing more details on the plant. There are also buttons to add a new plant and to filter the plant selection.",
+                "This image just shows the dropdown that appears when the user selects the 'filter' button, where they can filter the plants shown by family and genus.",
+                "You can see after the filter details are submitted, it will filter out all the plants not matching and only show those matching, in this case 'Woodland Strawberry' since it is in the family Rosaceae and has the genus Fragaria (as shown in previous image).", 
+                "This shows the page when user clicks on a plant. You can see when a user is logged in, they can edit or delete a plant which they personally submitted. Logged in users can also add comments to uploaded plants.",
+                "Page listing the different plant keys available, as well as the user keys which they have uploaded (none have been uploaded in this image).",
+                "When we click on a plant key, we get shown choices to choose from. The plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.", 
+                "This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away.",
+                "Here is the form for if the user want to upload their own JSON file to create their own interactive plant key.", 
+                "This is an example of a test key I created to show how it should be formatted so all the data is extracted properly.", "After submitted, it will redirect the user to the plant key page and show their key under 'User Keys', and the user can then click it.","This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
+            ]
+        }
     ],
-    "fitness_captions": [
-        "Main screen the user first encounters to login to their account or register for one. The fitness app keeps track of each users individual workouts, calorie intake, etc.", 
-        "We created a user janesmith123 to complete all our testing with.",
-        "The main navigation screen where the user can either go to create a new workout (the portion of the application which I programmed), or can go to their weight details.", 
-        "When click on the green workout button, you come to this page where the user can either create a new workout or view their history.", 
-        "Initial page shown when user wants to create new workout. They can add either cardio excersize or strength excersize to the current workout.", 
-        "Adding a new cardio excersize to the workout.", 
-        "Can see I added error handling measures in case user doesnt input some piece of data, it is handled in the logic layer and relays this information to the UI.", 
-        "After user submits the excersize it will be listed within the current workout page.", 
-        "Adding a strength workout involves the same process as a cardio workout and has error handling as well to let the user know when imporperly filled in an input.",
-        "You can see we now have a workout which contains both a cardio and a strength workout, from which an excersize can either be edited or deleted if you wish. Once complete you press the 'finish' button.",
-        "The workout is then stored with the user and can be viewed in their workout history. I was only able to complete the listing out of the workouts before we had to submit our final version of the applicaiton at end of the term.",
-        "I was responsible with creating the layout of our applications website to show off the features of our application, you can see we made a video showcasing the app, have a section for velocity metrics for how quickly we completed portions of the app, our vision statement.",
-        "This is a general look at the structure of our applications files, where we used an 'n-tier Architecture' having a business layer, database layer, presentation (UI) layer and have domain-specific objects since this project was object oriented (OOP) based and we developed these classes outlining our main objects stored in the database. The objects associated with my portion of the app were Exercise, Workout, ExerciseWorkout, Cardio and Strength",
-        "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."
-    ],
-    "matrix_calc_images": [
-        "cofactor.png",
-        "matrix_size.png",
-        "matrix_vals.png",
-        "row_operations.png",
-        "start_page.png",
-        "submitted.png"
-    ],
-    "matrix_calc_captions": [
-        "When page first loads, the user needs to put in the amount of matrices they will be working with.", 
-        "The next screen will then ask for the dimensions of the matrices.", 
-        "Finally, the values of the matrices will be input.", 
-        "Once submitted, you are redirected to a screen showing your matrices, a text box to submit certain calculations and on the bottom of the screen is descriptions of commands to input in the text box to perform various types of matrix calculations.", 
-        "Typing AR will bring the user to a screen where they can perform various Gaussian and Gauss-Jordan row operations on the matrices, and the elementary matrices can be shown or not.", 
-        "If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."
-    ],
-    "rootedinnature_images": [
-        "rin.png",
-        "after_filter.png",
-        "dropdown.png",
-        "json_test.png",
-        "keys_home_after_add.png",
-        "key_tooltip.png",
-        "test_key_end.png",
-        "upload_json.png",
-        "before_filter.png",
-        "key.png",
-        "owner_plant.png",
-        "test_key.png",
-        "user_login_collection.png"
-    ],
-    "rootedinnature_captions":[
-        "Homepage, where there is the main header which contains all the page links and routes, as well as capabilities for users to register and login.", 
-        "Dropdowns I implemented with Javascript, allowing a user to create and view plants for their collection, as well as different plant keys that are accessible. It can be seen that I have logged in and it shows my username 'Brendan' now in green where the login button was, and there is now a logout button where the 'register' button used to be.", 
-        "Plant Collection page where users collected plants are be shown. When the user hovers over the image it shows some of the plants details, and the user can click the image to be redirected to a page showing more details on the plant. There are also buttons to add a new plant and to filter the plant selection.",
-        "This image just shows the dropdown that appears when the user selects the 'filter' button, where they can filter the plants shown by family and genus.",
-        "You can see after the filter details are submitted, it will filter out all the plants not matching and only show those matching, in this case 'Woodland Strawberry' since it is in the family Rosaceae and has the genus Fragaria (as shown in previous image).", 
-        "This shows the page when user clicks on a plant. You can see when a user is logged in, they can edit or delete a plant which they personally submitted. Logged in users can also add comments to uploaded plants.",
-        "Page listing the different plant keys available, as well as the user keys which they have uploaded (none have been uploaded in this image).",
-        "When we click on a plant key, we get shown choices to choose from. The plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.", 
-        "This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away.",
-        "Here is the form for if the user want to upload their own JSON file to create their own interactive plant key.", 
-        "This is an example of a test key I created to show how it should be formatted so all the data is extracted properly.", "After submitted, it will redirect the user to the plant key page and show their key under 'User Keys', and the user can then click it.","This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
-    ],
-    "protec_images": [
-        "active.png",
-        "print.png"
-    ],
-    "protec_captions": [
-        "I implemented a button to archive projects in the projects form. Then in the main view where all projects are viewed, the use can filter between active and archived projects with the shown toggle button.",
-        "Implemented more structure print out of purchase orders, encorporating their logo, address, tabled data."
+    "work": [
+        {
+            "name": "Protec",
+            "github": "",
+            "website": "",
+            "images": [
+                "active.png",
+                "print.png"
+            ],
+            "imagePath": "/imgs/protec/",
+            "captions": [
+                "I implemented a button to archive projects in the projects form. Then in the main view where all projects are viewed, the use can filter between active and archived projects with the shown toggle button.",
+                "Implemented more structure print out of purchase orders, encorporating their logo, address, tabled data." 
+            ]
+        }
     ]
 }
 

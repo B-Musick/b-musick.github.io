@@ -7,7 +7,7 @@ import { TbWorld } from "react-icons/tb";
 const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, animatedItem, itemStyle, clickCard }) => {
     const itemStyling = {
         ...itemStyle,
-        backgroundImage: `url(${item.image})`,
+        backgroundImage: `url(${item.imagePath+item.images[0]})`,
         backgroundPosition: 'center'
     };
 
@@ -22,7 +22,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, an
         onClick={()=>clickCard(item)}
     >
         <div className="self-start justify-self-end flex text-3xl">
-            <a href={item.githubLink}><FaGithub className="mx-2" /></a>
+            <a href={item.github}><FaGithub className="mx-2" /></a>
             <TbWorld />
         </div>
         <div className="justify-self-start self-end font-lobster text-3xl">
