@@ -41,7 +41,7 @@
                 "This is a general look at the structure of our applications files, where we used an 'n-tier Architecture' having a business layer, database layer, presentation (UI) layer and have domain-specific objects since this project was object oriented (OOP) based and we developed these classes outlining our main objects stored in the database. The objects associated with my portion of the app were Exercise, Workout, ExerciseWorkout, Cardio and Strength",
                 "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."
             ],
-            "classes": "flex justify-center", "childClasses": "w-1/2 flex justify-center" 
+            "classes": "flex justify-center", "childClasses": "w-full sm:w-1/2 flex justify-center" 
         },
         {
             "name": "Matrix Calculator",
