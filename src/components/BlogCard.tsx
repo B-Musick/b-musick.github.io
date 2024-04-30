@@ -2,13 +2,12 @@ import React from 'react';
 import { BlogCardProps } from '../lib/types';
 import FloaterCard from './FloaterCard';
 
-const BlogCard: React.FC<BlogCardProps> = ({key, metadata, classes}) => {
+const BlogCard: React.FC<BlogCardProps> = ({metadata, classes}) => {
     const classNames = `${classes} drop-shadow-xl grid rounded-3xl p-3 w-[250px] h-[160px] text-white my-4`;
     const categories = Object.keys(metadata).includes('categories') ? metadata.categories.split(','): '';
 
     return (
         <div
-            key={key}
             className={classNames}
             style={{backgroundImage:`url(${metadata.image})`, 
             backgroundSize: 'cover'}}
@@ -20,7 +19,7 @@ const BlogCard: React.FC<BlogCardProps> = ({key, metadata, classes}) => {
                     </div>
                     <div className='italic text-xs font-roboto font-black'>{metadata.date}</div>
                     {categories && <div className="mt-2 flex">
-                        {categories.map((category:string) => <FloaterCard skill={category}/> )}
+                        {categories.map((category:string, index: number) => <FloaterCard key={index} skill={category}/> )}
                     </div>}
                 </div>
             </div>

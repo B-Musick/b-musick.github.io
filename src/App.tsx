@@ -13,7 +13,7 @@ import { ThemeContext } from './context/ThemeContext.tsx'
 
 function App() {
   const [isLight, setIsLight] = useState(true);
-  console.log(window.location.href.includes('blog'))
+  
   return (
     <ThemeContext.Provider value={{isLight, setIsLight}}>
       <div className={`h-screen w-full ${!isLight && 'dark'}`}>

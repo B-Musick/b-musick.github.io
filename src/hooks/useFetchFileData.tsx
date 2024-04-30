@@ -17,19 +17,9 @@ function useFetchFileData(filePath) {
                 fetch(file)
                     .then(data => data.text())
                     .then(text => {
-                        console.log('text: ', text)
-
                         setPost(text);
                         setMetadata(matter(post).data)
                     });
-                console.log('file path:', filePath)
-                // const file = await import(/* @vite-ignore */filePath);
-                // const fileData = await fetch(file.text());
-                // const fileText = await file.text();
-                // console.log('text: ', fileText)
-
-                // setPost(fileText);
-                // setMetadata(matter(post).data)
             } catch(err) {
                 console.log("Error importing file")
             }

@@ -6,7 +6,7 @@ import { TbWorld } from "react-icons/tb";
 import { FaInfoCircle } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 
-const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, animatedItem, itemStyle, clickCard }) => {
+const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animatedItem, itemStyle, clickCard }) => {
     const itemStyling = {
         ...itemStyle,
         backgroundImage: `url(${item.imagePath+item.images[0]})`,
@@ -14,7 +14,6 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, an
     };
 
     return (<motion.div
-        key={key}
         className="drop-shadow-lg grid bg-red-400 rounded-3xl p-3"
         variants={itemVariants}
         initial="center"

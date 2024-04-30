@@ -13,6 +13,7 @@ function BlogPage(){
             <Link 
                 to={{pathname: `/blog/${filename.split('.')[0]}`}}
                 state={{post, metadata}} 
+                key={index}
             >
                 <BlogCard blog={post} metadata={metadata} key={index} classes={setBackground(metadata, index)} />
             </Link>
