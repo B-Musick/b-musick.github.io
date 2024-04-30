@@ -63,37 +63,37 @@ function HomePage() {
                 <h1 className="text-5xl m-10">Hello friend. <br /> I'm Brendan Musick, <br />Full Stack Developer. </h1>
                 <Link 
                     className="animate-bounce absolute bottom-20 w-10 h-10 mb-5"
-                    to={{pathname: `/`, hash:'complete'}}
+                    to={{pathname: `/`, hash:'personal'}}
                 >
                     <FaAngleDoubleDown className={`w-10 h-10 ${location.hash == '' && !userScrolled ? '':'hidden'}`} />
                 </Link>
             </div>
-            <div className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex flex-col justify-center items-center text-white relative" id="complete">
+            <div className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex flex-col justify-center items-center relative text-white" id="personal">
                 <Carousel 
                     items={projects} 
                     itemVariants={projectVariants} 
                     itemLocations={positions}
                     itemStyle={projectStyle}
                     indices={indices}
-                    carouselTitle="Projects"
+                    carouselTitle="Personal"
                     CarouselItem={CarouselCard}
                     modalAction={handleModalOpen}
                 />
                 <Link 
-                    className={`animate-bounce absolute bottom-20 w-10 h-10 mb-5  ${location.hash == '#complete' && !scrolledPastProjects ? '':'hidden'}`}
-                    to={{pathname: `/`, hash:'in-progress'}}
+                    className={`animate-bounce absolute bottom-20 w-10 h-10 mb-5  ${location.hash == '#personal' && !scrolledPastProjects ? '':'hidden'}`}
+                    to={{pathname: `/`, hash:'enterprise'}}
                 >
                     <FaAngleDoubleDown className={`w-10 h-10`} />
                 </Link>
             </div>
-            <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900 flex justify-center items-center text-white" id="in-progress">
+            <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900 flex justify-center items-center" id="enterprise">
                 <Carousel
                     items={work}
                     itemVariants={projectVariants}
                     itemLocations={positions}
                     itemStyle={projectStyle}
                     indices={[0]}
-                    carouselTitle="In Progress"
+                    carouselTitle="Enterprise"
                     CarouselItem={CarouselCard}
                     modalAction={handleModalOpen}
                 />

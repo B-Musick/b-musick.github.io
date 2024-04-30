@@ -6,7 +6,7 @@
     "projects": [
         {
             "name": "Fitness App",
-            "github": "https://github.com/B-Musick/sqr_rooted_in_nature",
+            "github": "",
             "images": [
                 "0_start_screen.png",
                 "1_start_screen_user_info.png",
@@ -41,19 +41,19 @@
                 "This is a general look at the structure of our applications files, where we used an 'n-tier Architecture' having a business layer, database layer, presentation (UI) layer and have domain-specific objects since this project was object oriented (OOP) based and we developed these classes outlining our main objects stored in the database. The objects associated with my portion of the app were Exercise, Workout, ExerciseWorkout, Cardio and Strength",
                 "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."
             ],
-            "classes": "flex justify-center", "childClasses": "w-full sm:w-1/2 flex justify-center" 
+            "classes": "flex justify-center !text-white", "childClasses": "w-full sm:w-1/2 flex justify-center text-white" 
         },
         {
             "name": "Matrix Calculator",
             "github": "https://github.com/B-Musick/matrix-calculator-rebuild-react",
             "website": "https://b-musick.github.io/matrix-calculator-rebuild-react/",
             "images": [
-                "cofactor.png",
+                "start_page.png",
                 "matrix_size.png",
                 "matrix_vals.png",
+                "submitted.png",
                 "row_operations.png",
-                "start_page.png",
-                "submitted.png"
+                "cofactor.png"
             ],
             "imagePath": "/imgs/matrix_calculator/",
             "captions": [
@@ -63,7 +63,8 @@
                 "Once submitted, you are redirected to a screen showing your matrices, a text box to submit certain calculations and on the bottom of the screen is descriptions of commands to input in the text box to perform various types of matrix calculations.", 
                 "Typing AR will bring the user to a screen where they can perform various Gaussian and Gauss-Jordan row operations on the matrices, and the elementary matrices can be shown or not.", 
                 "If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."
-            ]
+            ],
+            "classes": "text-white", "childClasses": "text-white" 
         },
         {
             "name": "Rooted In Nature",
@@ -71,18 +72,18 @@
             "website": "",
             "images": [
                 "rin.png",
-                "after_filter.png",
                 "dropdown.png",
+                "user_login_collection.png",
+                "before_filter.png",
+                "after_filter.png",
+                "owner_plant.png",
+                "keys_home_after_add.png",
+                "key.png",
+                "key_tooltip.png",
+                "upload_json.png",
                 "json_test.png",
                 "keys_home_after_add.png",
-                "key_tooltip.png",
-                "test_key_end.png",
-                "upload_json.png",
-                "before_filter.png",
-                "key.png",
-                "owner_plant.png",
-                "test_key.png",
-                "user_login_collection.png"
+                "test_key_end.png"
             ],
             "imagePath": "/imgs/rootedinnature/",
             "captions": [
@@ -96,8 +97,11 @@
                 "When we click on a plant key, we get shown choices to choose from. The plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.", 
                 "This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away.",
                 "Here is the form for if the user want to upload their own JSON file to create their own interactive plant key.", 
-                "This is an example of a test key I created to show how it should be formatted so all the data is extracted properly.", "After submitted, it will redirect the user to the plant key page and show their key under 'User Keys', and the user can then click it.","This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
-            ]
+                "This is an example of a test key I created to show how it should be formatted so all the data is extracted properly.", 
+                "After submitted, it will redirect the user to the plant key page and show their key under 'User Keys', and the user can then click it.",
+                "This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
+            ],
+            "classes": "text-white", "childClasses": "text-white" 
         }
     ],
     "work": [
@@ -106,14 +110,17 @@
             "github": "",
             "website": "",
             "images": [
+                "protec_logo.png",
                 "active.png",
                 "print.png"
             ],
             "imagePath": "/imgs/protec/",
             "captions": [
+                "Company based in Winkler which me and another friend/cowork have developed their ERP system.",
                 "I implemented a button to archive projects in the projects form. Then in the main view where all projects are viewed, the use can filter between active and archived projects with the shown toggle button.",
                 "Implemented more structure print out of purchase orders, encorporating their logo, address, tabled data." 
-            ]
+            ],
+            "classes": "text-black", "childClasses": "text-black" 
         }
     ]
 }

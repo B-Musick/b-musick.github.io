@@ -3,6 +3,8 @@ import { CarouselCardProps } from "../lib/types";
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
+import { FaInfoCircle } from "react-icons/fa";
+import { GrGallery } from "react-icons/gr";
 
 const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, animatedItem, itemStyle, clickCard }) => {
     const itemStyling = {
@@ -22,8 +24,11 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, key, itemVariants, an
         onClick={()=>clickCard(item)}
     >
         <div className="self-start justify-self-end flex text-3xl">
-            <a href={item.github}><FaGithub className="mx-2" /></a>
-            <TbWorld />
+            {/* TODO: add information button */}
+            {/* <a href={item.info}><FaInfoCircle /></a> */}
+            <GrGallery className="mr-2"/>
+            <a href={item.github} className={item.github ? 'visible' : 'hidden'}><FaGithub className="mr-2" /></a>
+            <a href={item.website} className={item.website ? 'visible': 'hidden'}><TbWorld /></a>
         </div>
         <div className="justify-self-start self-end font-lobster text-3xl">
             {item.name}
