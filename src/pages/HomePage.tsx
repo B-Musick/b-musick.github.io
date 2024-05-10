@@ -23,8 +23,8 @@ function HomePage() {
     const projectVariants = {
         center: { x: " 0%", scale: 1, zIndex: 5, skewY: "0deg" },
         left1: { x: "-36%", scale: 0.7, zIndex: 3, skewY: "10deg", brightness: "5%" },
-        left2: { x: "-60%", scale: 0.5, zIndex: 2, skewY: "15deg" },
-        right2: { x: "60%", scale: 0.5, zIndex: 2, skewY: "-15deg" },
+        left2: { x: "-50%", scale: 0.5, zIndex: 2, skewY: "15deg" },
+        right2: { x: "50%", scale: 0.5, zIndex: 2, skewY: "-15deg" },
         right1: { x: "36%", scale: 0.7, zIndex: 3, skewY: "-10deg" },
 
     }
