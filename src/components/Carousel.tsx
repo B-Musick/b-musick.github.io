@@ -41,7 +41,7 @@ const Carousel: React.FC<CarouselProps> = ({items, itemVariants, itemLocations, 
                         clickCard={modalAction}
                     />
                 })}
-                <div className="flex h-[21em] w-96 justify-between">
+                <div className="flex h-[21em] w-[450px] z-[4] justify-between">
                     <button onClick={handlePrev} className="self-start z-8 h-full w-20" />
                     <button onClick={handleNext} className="justify-self-end self-end z-8 h-full w-20" />
                 </div>

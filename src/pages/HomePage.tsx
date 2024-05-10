@@ -19,15 +19,20 @@ function HomePage() {
     const [modalContent, setModalContent] = useState<Project>({} as Project);
 
     const location = useLocation();
-    const indices = [0, 1, 2]
+    const indices = [0, 1, 2, 3, 4]
     const projectVariants = {
         center: { x: " 0%", scale: 1, zIndex: 5, skewY: "0deg" },
         left1: { x: "-36%", scale: 0.7, zIndex: 3, skewY: "10deg", brightness: "5%" },
+        left2: { x: "-60%", scale: 0.5, zIndex: 2, skewY: "15deg" },
+        right2: { x: "60%", scale: 0.5, zIndex: 2, skewY: "-15deg" },
         right1: { x: "36%", scale: 0.7, zIndex: 3, skewY: "-10deg" },
+
     }
     const positions = [
         "center",
         "left1",
+        "left2",
+        "right2",
         "right1"
     ]
     const projectStyle = { width: '15em', height: "18em", position: 'absolute', backgroundImage: '', backgroundSize: 'cover' }

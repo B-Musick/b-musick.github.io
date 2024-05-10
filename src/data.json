@@ -1,7 +1,8 @@
 {
     "filenames": [
         "github-pages.md",
-        "markdown-blog.md"
+        "markdown-blog.md",
+        "react-query.md"
     ],
     "projects": [
         {
@@ -102,6 +103,43 @@
                 "This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
             ],
             "classes": "text-white", "childClasses": "text-white" 
+        },
+        {
+            "name": "Graph Creator",
+            "github": "https://github.com/B-Musick/graph-maker",
+            "website": "https://b-musick.github.io/graph-maker/",
+            "images": [
+                "homepage.png",
+                "histogram_selector.png",
+                "histogram.png",
+                "bar_graph.png",
+                "box_plot.png",
+                "normal.png",
+                "scatterplot.png"
+            ],
+            "imagePath": "/imgs/graph_maker/",
+            "captions":[
+                "Starting at the homepage, the user is asked to choose from a dropdown list of graph types, then upload an associated file of the appropriate type. When the dropdown is selected, more information on the file format will be shown (see next image).", 
+                "Once the dropdown value is selected (in this case Histogram), some extra text inputs might be shown and more info on the way to format your file will be described.", "Histogram example output after uploading an appropriately formatted .csv file, shows a tooltip output from user hovering over one of the bars.", 
+                "Bar graph output, also showing tooltip output.", 
+                "Box plot, where tooltips will be shown for the quartiles, median, min and maximum.", 
+                "Normal distribution graph.",
+                "Scatterplot created using a specifically formatted .csv file, it can be seen I implemented tooltips where when hovering over the points the coordinates of that point will be shown to the user."
+            ],
+            "classes": "text-black", "childClasses": "text-black" 
+        },
+        {
+            "name": "2048",
+            "github": "https://github.com/B-Musick/2048-game",
+            "website": "http://www.brendanmusick.ca/projects/2048",
+            "images": [
+                "home.png"
+            ],
+            "imagePath": "/imgs/twenty_fourty_eight/",
+            "captions": [
+                "My own recreation of a game invented by Gabriella Cirulli. Used D3 for the visual canvas and geometry.Used object oriented programming in JS for logic."
+            ],
+            "classes": "text-black", "childClasses": "text-black" 
         }
     ],
     "work": [
