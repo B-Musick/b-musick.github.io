@@ -5,10 +5,11 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import { FaInfoCircle } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
+import FloaterCard from "./FloaterCard";
 
 const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animatedItem, itemStyle, clickCard }) => {
     const [showHoverInfo, setShowHoverInfo] = useState(false);
-    const {github, website, hoverInfo, name, images, imagePath, childClasses} = item;
+    const {github, website, hoverInfo, name, images, imagePath, childClasses, categories, categoriesClass} = item;
     const itemStyling = {
         ...itemStyle,
         backgroundImage: `url(${imagePath+images[0]})`,
@@ -42,6 +43,9 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
         </div>
         <div className="justify-self-start self-end font-lobster text-3xl">
             {name}
+            {categories && <div className={`${categoriesClass} flex flex-wrap`}>
+                {categories.map((category:string, index: number) => <FloaterCard key={index} skill={category}/> )}
+            </div>}
         </div>
     </motion.div>)
 }

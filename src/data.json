@@ -43,6 +43,7 @@
                 "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."
             ],
             "hoverInfo": "Android application developed using an Agile approach along wth 4 other group members in a Software Engineering course. This app tracks workouts, meals and calories of user to improve their fitness.",
+            "categories":["android","java", "kotlin", "xml", "sql"],
             "classes": "flex justify-center !text-white", "childClasses": "" 
         },
         {
@@ -67,6 +68,7 @@
                 "If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."
             ],
             "hoverInfo": "Matrix calculator developed in React to manipulate matrices and perform various calculations on them. This is useful to confirm hand calculations.",
+            "categories": ["react"],
             "classes": "text-white", "childClasses": "text-white" 
         },
         {
@@ -105,6 +107,7 @@
                 "This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
             ],
             "hoverInfo": "Website I developed to host a variey of different functions, including being used as a plant collection database where users can store and view plants they collected and info about them. I also contains interactive plant keys where users navigate binomial keys interactively to id plants they find.",
+            "categories":["javascript", "html", "css", "nodejs", "mongoDB", "express", "mvc"],
             "classes": "text-white", "childClasses": "text-white" 
         },
         {
@@ -129,6 +132,8 @@
                 "Normal distribution graph.",
                 "Scatterplot created using a specifically formatted .csv file, it can be seen I implemented tooltips where when hovering over the points the coordinates of that point will be shown to the user."
             ],
+            "hoverInfo":"Program which takes in a csv file and will output an associated graph. Capable of producing histograms, bar graphs, scatterplots, normal graphs or boxplot.",
+            "categories":["d3", "javascript", "html", "css", "oop"],
             "classes": "text-black", "childClasses": "text-black" 
         },
         {
@@ -163,6 +168,8 @@
                 "Implemented more structure print out of purchase orders, encorporating their logo, address, tabled data." 
             ],
             "hoverInfo":"Client based out of Winkler for whom I co-developed an ERP system for. This includes capabilities for keeping track of parts, inventory, purchase orders and customers.",
+            "categories":["vueJS", "php", "laravel", "mysql"],
+            "categoriesClass": "!text-gray-300",
             "classes": "text-black", "childClasses": "text-white" 
         }
     ]
