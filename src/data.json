@@ -42,7 +42,8 @@
                 "This is a general look at the structure of our applications files, where we used an 'n-tier Architecture' having a business layer, database layer, presentation (UI) layer and have domain-specific objects since this project was object oriented (OOP) based and we developed these classes outlining our main objects stored in the database. The objects associated with my portion of the app were Exercise, Workout, ExerciseWorkout, Cardio and Strength",
                 "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."
             ],
-            "classes": "flex justify-center !text-white", "childClasses": "w-full sm:w-1/2 flex justify-center text-white" 
+            "hoverInfo": "Android application developed using an Agile approach along wth 4 other group members in a Software Engineering course. This app tracks workouts, meals and calories of user to improve their fitness.",
+            "classes": "flex justify-center !text-white", "childClasses": "" 
         },
         {
             "name": "Matrix Calculator",
@@ -65,6 +66,7 @@
                 "Typing AR will bring the user to a screen where they can perform various Gaussian and Gauss-Jordan row operations on the matrices, and the elementary matrices can be shown or not.", 
                 "If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."
             ],
+            "hoverInfo": "Matrix calculator developed in React to manipulate matrices and perform various calculations on them. This is useful to confirm hand calculations.",
             "classes": "text-white", "childClasses": "text-white" 
         },
         {
@@ -102,6 +104,7 @@
                 "After submitted, it will redirect the user to the plant key page and show their key under 'User Keys', and the user can then click it.",
                 "This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
             ],
+            "hoverInfo": "Website I developed to host a variey of different functions, including being used as a plant collection database where users can store and view plants they collected and info about them. I also contains interactive plant keys where users navigate binomial keys interactively to id plants they find.",
             "classes": "text-white", "childClasses": "text-white" 
         },
         {
@@ -139,6 +142,7 @@
             "captions": [
                 "My own recreation of a game invented by Gabriella Cirulli. Used D3 for the visual canvas and geometry.Used object oriented programming in JS for logic."
             ],
+            "hoverInfo": "",
             "classes": "text-black", "childClasses": "text-black" 
         }
     ],
@@ -158,7 +162,8 @@
                 "I implemented a button to archive projects in the projects form. Then in the main view where all projects are viewed, the use can filter between active and archived projects with the shown toggle button.",
                 "Implemented more structure print out of purchase orders, encorporating their logo, address, tabled data." 
             ],
-            "classes": "text-black", "childClasses": "text-black" 
+            "hoverInfo":"Client based out of Winkler for whom I co-developed an ERP system for. This includes capabilities for keeping track of parts, inventory, purchase orders and customers.",
+            "classes": "text-black", "childClasses": "text-white" 
         }
     ]
 }

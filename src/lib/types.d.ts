@@ -48,7 +48,8 @@ export type CarouselCardProps = {
     itemVariants: any,
     animatedItem: any,
     itemStyle: any,
-    clickCard: any
+    clickCard: any,
+    hoverInfo: string
 }
 
 export type SocialsProps = {

@@ -54,18 +54,37 @@ function HomePage() {
         setShowModal(false);
     }
 
-    // const actionBar = <div className='bg-gray-100 my-4 mx-14 rounded-xl w-full p-2'><button onClick={handleModalClose}>Accept</button></div>;
     const actionBar = ""
 
-    const modal = <Modal classes={modalContent.classes} childClasses={modalContent.childClasses} className="z-[0]" onClose={handleModalClose} actionBar={actionBar}>
+    const modal = <Modal 
+                    classes={modalContent.classes} 
+                    childClasses={modalContent.childClasses} 
+                    className="z-[0]" 
+                    onClose={handleModalClose} 
+                    actionBar={actionBar}
+                    >
         {/* receive children prop in Modal */}
         <ProjectGallery modalContent={modalContent}/>
     </Modal>;
 
     return (
         <main className="w-full">
-            <div className="h-screen bg-gradient-to-br dark:from-cyan-900 dark:to-gray-900 from-cyan-700 to-blue-900 font-lobster text-teal-200 flex justify-center items-center relative">
-                <h1 className="text-5xl m-10">Hello friend. <br /> I'm Brendan Musick, <br />Full Stack Developer. </h1>
+            <div 
+                className="
+                    h-screen 
+                    bg-gradient-to-br 
+                    dark:from-cyan-900 
+                    dark:to-gray-900 
+                    from-cyan-700 
+                    to-blue-900 
+                    font-lobster 
+                    text-teal-200 
+                    flex 
+                    justify-center 
+                    items-center 
+                    relative
+                ">
+                <h1 className="text-5xl m-10 text-center">Brendan Musick <br /><span className='text-gray-800 animate-pulse'>Full Stack Developer</span></h1>
                 <Link 
                     className="animate-bounce absolute bottom-20 w-10 h-10 mb-5"
                     to={{pathname: `/`, hash:'personal'}}
