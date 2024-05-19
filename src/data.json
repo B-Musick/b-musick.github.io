@@ -1,5 +1,7 @@
 {
     "filenames": [
+        "biopython-ui.md",
+        "framer-motion.md",
         "github-pages.md",
         "markdown-blog.md",
         "react-query.md"

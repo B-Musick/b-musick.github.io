@@ -17,6 +17,7 @@ categories: "react, programming"
 Made a hook which called **useFetchFileData** which is taking in the file path as a parameter. It imports the specific file using **import**, extracts the data from the file and then the text from this data (fileText). The post and metadata is then extraced into their own state variables and returned.  
 
 ```
+-
 import { useState, useEffect } from 'react';
 import matter from 'gray-matter';
 import { Buffer } from 'buffer';
@@ -60,6 +61,7 @@ Most sites which encorporate code sections, allow you to visually see the code e
 To highlight the code easily, I used [react-syntax-highlighter](https://www.npmjs.com/package/react-syntax-highlighter), which gives the code its box styling.
 
 ```
+-
 const Code = ({children}) => {
     const [copied, setCopied] = useState(false);
     return (
@@ -88,7 +90,8 @@ const Code = ({children}) => {
 ## Parsing Markdown
 I've decided to implement this blog so I can write a Markdown file, and it will automatically parse it into the styled blog. I used the package [markdown-to-jsx](https://www.npmjs.com/package/markdown-to-jsx), which allows you to place markdown string within a component appropriately named **<Markdown />**.
 
-``` 
+```
+-
 <Markdown className="w-full p-5" options={{ 
     wrapper: 'article',
     overrides:{
@@ -117,6 +120,7 @@ Delve into how you had to integrate useLocation to pass the imported markdown fi
 Here is the starter skeleton for every new blog I create:
 
 ```
+-
 '---
 title: "Insert title"
 subtitle: "Insert subtitle"

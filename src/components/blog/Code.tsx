@@ -9,8 +9,17 @@ import { FaCheckSquare } from "react-icons/fa";
 
 const Code: React.FC<BlogComponentType> =({children}) => {
     const [copied, setCopied] = useState(false);
+    let fileName = String(children).split('\n')[0] != '-' ? String(children).split('\n')[0]: ''
+    
+    if(fileName){
+        let childrenSize = String(children).split('\n').length
+        children = String(children).split('\n').splice(1,childrenSize).join('\n')
+    }
+
     return (
         <div className="relative w-full my-6 dark:!text-white">
+            <span className="absolute left-0 bg-black text-white italic pr-1 extra-bold">{fileName}</span>
+
             <CopyToClipboard 
                 className="absolute right-1 top-2" 
                 text={children} 

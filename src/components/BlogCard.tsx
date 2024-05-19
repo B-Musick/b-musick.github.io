@@ -3,7 +3,7 @@ import { BlogCardProps } from '../lib/types';
 import FloaterCard from './FloaterCard';
 
 const BlogCard: React.FC<BlogCardProps> = ({metadata, classes}) => {
-    const classNames = `${classes} drop-shadow-xl grid rounded-3xl p-3 w-[250px] h-[160px] text-white my-4`;
+    const classNames = `bg-black ${classes} drop-shadow-xl grid rounded-3xl p-3 w-[250px] h-[160px] text-white my-4`;
     const categories = Object.keys(metadata).includes('categories') ? metadata.categories.split(','): '';
 
     return (
