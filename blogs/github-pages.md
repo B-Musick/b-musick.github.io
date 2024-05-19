@@ -30,6 +30,7 @@ It should be noted that if you are using **react-router-dom**, and are using a b
 In your react-vite project. you will have to set the base config for the website in the **vite.config.js** file. Since this is my portfolio and is the base domain for github (b-musick.github.io), I just used it as the base:
 
 ```
+-
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.md'],
@@ -40,6 +41,7 @@ export default defineConfig({
 Normally you would need to add the repository name to the end:
 
 ```
+-
 base: 'https://b-musick.github.io/{repository_name}/'
 ```
 
@@ -50,6 +52,7 @@ base: 'https://b-musick.github.io/{repository_name}/'
 Create a new file in a folder **.github/workflows/deploy.yml** in the root directory. Paste the following in the file:
 
 ```
+-
 name: Deploy
 
 on:
@@ -112,6 +115,7 @@ I will breakdown the parts of the file to get a better understanding of what its
 View this document if you want to learn more about [workflows](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#workflows).
 
 ```
+-
 on:
   push:
     branches:
@@ -122,6 +126,7 @@ The first part of the script will ensure that the workflow is triggered only whe
 
 ### Group jobs
 ```
+-
 jobs:
 ```
 Everything indented under this will be a specific job that is defined.
@@ -129,6 +134,7 @@ Everything indented under this will be a specific job that is defined.
 ### Create job
 See a job named **build** is defined. Workflows are run on virtual machines, so you need to set the OS for this machine
 ```
+-
 jobs:
   build:
     name: Build
@@ -137,6 +143,7 @@ jobs:
 
 ### Define steps in Job
 ```
+-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
@@ -163,6 +170,7 @@ jobs:
 When want to checkout and use the specific repo associated with the deploy script:
 
 ```
+-
 - name: Checkout repo
   uses: actions/checkout@v2
 
@@ -171,6 +179,7 @@ When want to checkout and use the specific repo associated with the deploy scrip
 ### Setup node
 To setup and define the version for node
 ```
+-
 - name: Setup Node
   uses: actions/setup-node@v1
   with:
@@ -183,6 +192,7 @@ To setup and define the version for node
 To see the actions in progress, go to the following tab in github:
 
 ```
+-
 Github > Project Repo > Actions
 ```
 
