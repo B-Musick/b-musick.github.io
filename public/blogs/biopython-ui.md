@@ -1,6 +1,6 @@
 ---
 title: "Biopython User Interface"
-subtitle: "Implementing user interface along with Django Api to access Biopython functions"
+subtitle: "Implementing react UI with Django Api accessing Biopython functions"
 date: "18-05-2024"
 image: "/imgs/biopython.png"
 categories: "react, django, biopython, programming"
@@ -59,7 +59,82 @@ export function getAvailableDatabases() {
 }
 ```
 
-I created a component to search and desplay results, within which 
+I created a component to search and display a dropdown for the user to select which database they will use to search:
+
+<img src="/imgs/blogs/db-dropdown.png" className="max-w-md mx-auto"/>
+
+### Search Entrez (esearch)
+In order to retrieve gene data from the entrez databases, you need to know the id's associated with the genes. Thus, biopython has a method **Entrez.esearch** which will take in the database selected, a search term and max amount of results you want returned. Calling this will return a list of ids for results found.
+
+```
+entrez_api/views.py
+def retrieveIdsFromEntrez(db_type, search_term, max_results):
+    handle = Entrez.esearch(db=db_type, term=search_term, retmax=max_results)
+    rec_list = Entrez.read(handle)
+    handle.close()
+
+    return rec_list['IdList']
+```
+
+### Fetch Entrez (efetch)
+Now with the retrieved ids, you can either pass a single id or a list of ids. Once the data is fetched, can parse into a list of items.
+
+```
+entrez_api/views.py
+def fetchSeqRecordsFromId(dbToSearch, ids, returnType):
+    # Will get a list of records
+    stream = Entrez.efetch(db=dbToSearch, id=ids, rettype=returnType)
+    records = list(SeqIO.parse(stream, returnType)) # Seq object, can treat like string - See chapter 3 - 
+    stream.close()
+    
+    return records
+```
+
+Need to convert some of the attributes to string so had to loop throught the records and serialize the items, luckily the **seq** attribute which is a [Sequence object](https://biopython.org/DIST/docs/tutorial/Tutorial.html#sec17) can be treated like a string:
+
+```
+entrez_api/views.py
+def convertSeqRecordsToString(records):
+    string_records = []
+
+       # records are in SeqRecord format, convert
+    for rec in records:
+        string_records.append({
+            "id": rec.id,
+            "seq": str(rec.seq),
+            "name": rec.name,
+            "description":rec.description,
+            "dbxrefs": rec.dbxrefs,
+            # "features": rec.features,
+            # Will have to create a serializer for annotations
+            "annotations": json.dumps(str(rec.annotations)),
+            "letter_annotations": rec.letter_annotations
+        })
+    
+    return string_records
+```
+
+Thus the final url endpoint looks like the following using the defined methods:
+
+```
+entrez_api/views.py
+@api_view(['GET'])
+def search(request):
+    Entrez.email = "bmuze1@gmail.com"
+    # From the request it will take term from the search bar and use it for the term
+    search_term = request.query_params['searchTerm']
+    max_results = request.query_params['maxResults']
+    db_type= request.query_params['databaseType']
+
+    id_list = retrieveIdsFromEntrez(db_type, search_term, max_results)
+
+    records = fetchSeqRecordsFromId("nucleotide", id_list, "gb")
+
+    return Response(convertSeqRecordsToString(records))
+```
+
+The user interface with a search output looks like this:
+<img src="/imgs/blogs/entrez-search.png" className="max-w-md mx-auto"/>
 
 ### Testing
 To ensure this route always returns the needed data, I tested Django's Rest Framework:
@@ -92,3 +167,19 @@ class EntrezTests(APITestCase):
         self.assertIn("nucleotide",response.data)
 ```
 
+Testing that the search route works properly, passed some search params and checked the response:
+```
+entrez_api/tests.py
+def test_search_response(self):
+    response = self.client.get(
+        self.search_url, 
+        {
+            'databaseType': 'nucleotide', 
+            'searchTerm':'CRT[Gene Name] AND "Plasmodium falciparum"[Organism]',
+            'maxResults': 5
+        }
+    )
+    self.assertEqual(response.status_code, status.HTTP_200_OK)
+    self.assertEqual(len(response.data), 5)
+    self.assertEqual("OR483864.1",response.data[0]['id'])
+```
