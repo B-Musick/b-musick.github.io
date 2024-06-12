@@ -47,7 +47,9 @@ function HomePage() {
 
     const handleModalOpen = (modalValue:Project) => {
         setModalContent(modalValue);
-        setShowModal(true);
+        location.state.modalContent = modalValue;
+        location.state.previousLocation = location;
+        // setShowModal(true);
     }
 
     const handleModalClose = () => {
