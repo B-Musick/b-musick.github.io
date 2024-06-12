@@ -19,9 +19,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
     };
 
     return (
-    <Link
-        to={`/modal/${item.name.toLowerCase().split(' ').join('-')}`}
-        state={{previousLocation:location, modalContent: item}}>
+
         <motion.div
             className="drop-shadow-lg grid bg-red-400 rounded-3xl p-3 hover:cursor-pointer "
             variants={itemVariants}
@@ -33,6 +31,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
             onHoverStart={()=>setShowHoverInfo(true)}
             onHoverEnd={()=>setShowHoverInfo(false)}
         >
+  
             {showHoverInfo && <div className="opacity-75 absolute w-full h-full bg-black rounded-3xl hover:brightness-[25%] cursor-pointer">
             
             </div>}
@@ -43,7 +42,11 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
             <div className="self-start justify-self-end flex text-3xl z-[2]">
                 {/* TODO: add information button */}
                 {/* <a href={item.info}><FaInfoCircle /></a> */}
-                <GrGallery className="mr-2"/>
+                <Link
+                    to={`/project/${item.name.toLowerCase().split(' ').join('-')}`}
+                    state={{previousLocation:location, modalContent: item}}
+
+                    ><GrGallery className="mr-2"/></Link>
                 <a href={github} className={github ? 'visible z-[3]' : 'hidden'}><FaGithub className="mr-2 z-[1]" /></a>
                 <a href={website} className={website ? 'visible z-[3]': 'hidden'}><TbWorld /></a>
             </div>
@@ -54,7 +57,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
                 </div>}
             </div>
         </motion.div>
-    </Link>)
+)
 }
 
 export default CarouselCard;

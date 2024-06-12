@@ -6,6 +6,185 @@
         "markdown-blog.md",
         "react-query.md"
     ],
+    "proj": 
+    {
+        "biopython-visualizer":  {
+            "name": "Biopython Visualizer",
+            "github": "https://github.com/users/B-Musick/projects/3",
+            "images": [
+                "home.jpg",
+                "register.jpg",
+                "login.jpg",
+                "entrez.jpg",
+                "file-upload.jpg",
+                "add-sequence.jpg",
+                "motif.jpg",
+                "nucleotide-count.jpg",
+                "translate.jpg"
+            ],
+            "imagePath": "/imgs/biopython_visualizer/",
+            "captions": [
+                "Home 'hero' page which gives information about the website and important links. 3D animation of DNA in the background build using ThreeJS.",
+                "Register where user can create an account, they can thus use the Entrez Api (which uses their email) and store sequences.",
+                "Login page where user can login to begin using the websites features. Used jwt authorization in the Django api.",
+                "Incorporated the entrez api where the user uses their email to fetch data from this api (this is programmed using Biopythons entrez tools in the Django api).",
+                "User can upload a file (FASTA or GENBANK) and on the backend it will parse out the data using Biopython tools, returning a list of sequences parsed out. These data items can then be saved for later use.",
+                "Users can use the form to manually input their own sequences for use and access them later.",
+                "There is a motif finder which uses a DNA viewer to show on the sequence where these motifs are found. This is a 3D viewer programmed with React-ThreeJS-Fiber.",
+                "Implemented a nucleotide count calculation and associated bar graph (built using ChartJS).",
+                "Programmed a visualization for uploading a DNA sequence and getting the associated translation to protein."
+            ],
+            "hoverInfo": "",
+            "categories":["django", "react", "biopython", "threeJS", "chartJS"],
+            "classes": "flex justify-center !text-white", "childClasses": "" 
+        }, 
+        "fitness-app": {
+            "name": "Fitness App",
+            "github": "",
+            "images": [
+                "0_start_screen.png",
+                "1_start_screen_user_info.png",
+                "2_nav_screen.png",
+                "3_main_workout_page.png",
+                "4_main_workout_creation.png",
+                "5_new_cardio_workout.png",
+                "6_forgot_distance.png",
+                "7_after_submission.png",
+                "8_strength_workout.png",
+                "9_after_submissions.png",
+                "10_workout_history.png",
+                "11_workout_history_after_add.png",
+                "12_project_layout.png",
+                "13_test_files_layout.png",
+                "14_website.png" 
+            ],
+            "imagePath": "/imgs/fitness_app/",
+            "captions": [
+                "Main screen the user first encounters to login to their account or register for one. The fitness app keeps track of each users individual workouts, calorie intake, etc.", 
+                "We created a user janesmith123 to complete all our testing with.",
+                "The main navigation screen where the user can either go to create a new workout (the portion of the application which I programmed), or can go to their weight details.", 
+                "When click on the green workout button, you come to this page where the user can either create a new workout or view their history.", 
+                "Initial page shown when user wants to create new workout. They can add either cardio excersize or strength excersize to the current workout.", 
+                "Adding a new cardio excersize to the workout.", 
+                "Can see I added error handling measures in case user doesnt input some piece of data, it is handled in the logic layer and relays this information to the UI.", 
+                "After user submits the excersize it will be listed within the current workout page.", 
+                "Adding a strength workout involves the same process as a cardio workout and has error handling as well to let the user know when imporperly filled in an input.",
+                "You can see we now have a workout which contains both a cardio and a strength workout, from which an excersize can either be edited or deleted if you wish. Once complete you press the 'finish' button.",
+                "The workout is then stored with the user and can be viewed in their workout history. I was only able to complete the listing out of the workouts before we had to submit our final version of the applicaiton at end of the term.",
+                "I was responsible with creating the layout of our applications website to show off the features of our application, you can see we made a video showcasing the app, have a section for velocity metrics for how quickly we completed portions of the app, our vision statement.",
+                "This is a general look at the structure of our applications files, where we used an 'n-tier Architecture' having a business layer, database layer, presentation (UI) layer and have domain-specific objects since this project was object oriented (OOP) based and we developed these classes outlining our main objects stored in the database. The objects associated with my portion of the app were Exercise, Workout, ExerciseWorkout, Cardio and Strength",
+                "This project was developed using Test Driven Development, and tests were created as we completed features. We divided the tests into a folder for the business (logic) layer tests, and acceptance tests which run through multiple sections of the application and all layers."
+            ],
+            "hoverInfo": "Android application developed using an Agile approach along wth 4 other group members in a Software Engineering course. This app tracks workouts, meals and calories of user to improve their fitness.",
+            "categories":["android","java", "kotlin", "xml", "sql"],
+            "classes": "flex justify-center !text-white", "childClasses": "" 
+        },
+        "matrix-calculator": {
+            "name": "Matrix Calculator",
+            "github": "https://github.com/B-Musick/matrix-calculator-rebuild-react",
+            "website": "https://b-musick.github.io/matrix-calculator-rebuild-react/",
+            "images": [
+                "start_page.png",
+                "matrix_size.png",
+                "matrix_vals.png",
+                "submitted.png",
+                "row_operations.png",
+                "cofactor.png"
+            ],
+            "imagePath": "/imgs/matrix_calculator/",
+            "captions": [
+                "When page first loads, the user needs to put in the amount of matrices they will be working with.", 
+                "The next screen will then ask for the dimensions of the matrices.", 
+                "Finally, the values of the matrices will be input.", 
+                "Once submitted, you are redirected to a screen showing your matrices, a text box to submit certain calculations and on the bottom of the screen is descriptions of commands to input in the text box to perform various types of matrix calculations.", 
+                "Typing AR will bring the user to a screen where they can perform various Gaussian and Gauss-Jordan row operations on the matrices, and the elementary matrices can be shown or not.", 
+                "If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."
+            ],
+            "hoverInfo": "Matrix calculator developed in React to manipulate matrices and perform various calculations on them. This is useful to confirm hand calculations.",
+            "categories": ["react"],
+            "classes": "text-white", "childClasses": "text-white" 
+        },
+        "rooted-in-nature":{
+            "name": "Rooted In Nature",
+            "github": "https://github.com/B-Musick/sqr_rooted_in_nature",
+            "website": "",
+            "images": [
+                "rin.png",
+                "dropdown.png",
+                "user_login_collection.png",
+                "before_filter.png",
+                "after_filter.png",
+                "owner_plant.png",
+                "keys_home_after_add.png",
+                "key.png",
+                "key_tooltip.png",
+                "upload_json.png",
+                "json_test.png",
+                "keys_home_after_add.png",
+                "test_key_end.png"
+            ],
+            "imagePath": "/imgs/rootedinnature/",
+            "captions": [
+                "Homepage, where there is the main header which contains all the page links and routes, as well as capabilities for users to register and login.", 
+                "Dropdowns I implemented with Javascript, allowing a user to create and view plants for their collection, as well as different plant keys that are accessible. It can be seen that I have logged in and it shows my username 'Brendan' now in green where the login button was, and there is now a logout button where the 'register' button used to be.", 
+                "Plant Collection page where users collected plants are be shown. When the user hovers over the image it shows some of the plants details, and the user can click the image to be redirected to a page showing more details on the plant. There are also buttons to add a new plant and to filter the plant selection.",
+                "This image just shows the dropdown that appears when the user selects the 'filter' button, where they can filter the plants shown by family and genus.",
+                "You can see after the filter details are submitted, it will filter out all the plants not matching and only show those matching, in this case 'Woodland Strawberry' since it is in the family Rosaceae and has the genus Fragaria (as shown in previous image).", 
+                "This shows the page when user clicks on a plant. You can see when a user is logged in, they can edit or delete a plant which they personally submitted. Logged in users can also add comments to uploaded plants.",
+                "Page listing the different plant keys available, as well as the user keys which they have uploaded (none have been uploaded in this image).",
+                "When we click on a plant key, we get shown choices to choose from. The plant key which uses JSON file to load the data from, user clicks next answering the specific questions about the plant to eventually ID the plant.", 
+                "This shows a tooltip which I implemented for various definitions so that the user can hover over to get a definition of the word right away.",
+                "Here is the form for if the user want to upload their own JSON file to create their own interactive plant key.", 
+                "This is an example of a test key I created to show how it should be formatted so all the data is extracted properly.", 
+                "After submitted, it will redirect the user to the plant key page and show their key under 'User Keys', and the user can then click it.",
+                "This shows the test key that was uploaded in the previous images, and is now interactive.", "This image just shows reaching the end of the key the user uploaded."
+            ],
+            "hoverInfo": "Website I developed to host a variey of different functions, including being used as a plant collection database where users can store and view plants they collected and info about them. I also contains interactive plant keys where users navigate binomial keys interactively to id plants they find.",
+            "categories":["javascript", "html", "css", "nodejs", "mongoDB", "express", "mvc"],
+            "classes": "text-white", "childClasses": "text-white" 
+        },
+        "graph-creator":{
+            "name": "Graph Creator",
+            "github": "https://github.com/B-Musick/graph-maker",
+            "website": "https://b-musick.github.io/graph-maker/",
+            "images": [
+                "homepage.png",
+                "histogram_selector.png",
+                "histogram.png",
+                "bar_graph.png",
+                "box_plot.png",
+                "normal.png",
+                "scatterplot.png"
+            ],
+            "imagePath": "/imgs/graph_maker/",
+            "captions":[
+                "Starting at the homepage, the user is asked to choose from a dropdown list of graph types, then upload an associated file of the appropriate type. When the dropdown is selected, more information on the file format will be shown (see next image).", 
+                "Once the dropdown value is selected (in this case Histogram), some extra text inputs might be shown and more info on the way to format your file will be described.", "Histogram example output after uploading an appropriately formatted .csv file, shows a tooltip output from user hovering over one of the bars.", 
+                "Bar graph output, also showing tooltip output.", 
+                "Box plot, where tooltips will be shown for the quartiles, median, min and maximum.", 
+                "Normal distribution graph.",
+                "Scatterplot created using a specifically formatted .csv file, it can be seen I implemented tooltips where when hovering over the points the coordinates of that point will be shown to the user."
+            ],
+            "hoverInfo":"Program which takes in a csv file and will output an associated graph. Capable of producing histograms, bar graphs, scatterplots, normal graphs or boxplot.",
+            "categories":["d3", "javascript", "html", "css", "oop"],
+            "classes": "text-black", "childClasses": "text-black" 
+        },
+        "2048":{
+            "name": "2048",
+            "github": "https://github.com/B-Musick/2048-game",
+            "website": "http://www.brendanmusick.ca/projects/2048",
+            "images": [
+                "home.png"
+            ],
+            "imagePath": "/imgs/twenty_fourty_eight/",
+            "captions": [
+                "My own recreation of a game invented by Gabriella Cirulli. Used D3 for the visual canvas and geometry.Used object oriented programming in JS for logic."
+            ],
+            "hoverInfo": "",
+            "classes": "text-black", "childClasses": "text-black" 
+        }
+
+    },
     "current": [
         {
             "name": "Biopython Visualizer",

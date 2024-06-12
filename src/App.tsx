@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -8,14 +8,29 @@ import ResumePage from './pages/ResumePage.tsx';
 import NavigationBar from './components/NavigationBar.tsx';
 import ScrollToAnchor from './ScrollToAnchor';
 import Socials from './components/Socials.tsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeContext } from './context/ThemeContext.tsx'
 import Modal from './components/Modal.tsx';
 import ProjectGallery from './views/ProjectGallery.tsx';
+import { proj } from '/src/data.json'
 
 export default function App() {
   const [isLight, setIsLight] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const [modalContent, setModalContent] = useState({})
+
+  useEffect(()=>{
+    let currentUrlPath = location.pathname.slice(9,);
+
+      if(location.state && location.state.hasOwnProperty('modalContent')) {
+        setModalContent(location.state.modalContent)
+      }
+      else if(Object.keys(proj).includes(currentUrlPath) && proj[currentUrlPath]){
+        setModalContent(proj[currentUrlPath])
+      }
+  }, [location])
 
   return (
     <ThemeContext.Provider value={{isLight, setIsLight}}>
@@ -43,19 +58,26 @@ export default function App() {
                 <Route index={true} element={<BlogPage />} />
                 <Route index={false} path=":blogId" element={<BlogShowPage />} />
               </Route>
+              {Object.keys(modalContent).length > 0  && 
+              (
+                  <Route 
+                    path="/project/:id" 
+                    element={
+                      <Modal 
+                        classes={modalContent.classes} 
+                        childClasses={modalContent.childClasses} 
+                        className="z-[0]"
+                        onClose={()=>navigate(location.state && location.state.hasOwnProperty('previousLocation') ? location.state.previousLocation: "/", {replace: true})} 
+                      >
+                        <ProjectGallery modalContent={modalContent ? modalContent: location.state.modalContent}/>
+                      </Modal>
+                    } 
+                  />
+              )}
             </Routes>
-            {location.state && location.state.previousLocation && (
-              <Routes>
-                <Route path="/modal/:id" element={<Modal 
-                    classes={location.state.modalContent.classes} 
-                    childClasses={location.state.modalContent.childClasses} 
-                    className="z-[0]" 
-                    >
-        {/* receive children prop in Modal */}
-        <ProjectGallery modalContent={location.state.modalContent}/>
-    </Modal>} />
-              </Routes>
-            )}
+
+            
+            
         </div>
       </div>
     </ThemeContext.Provider>
