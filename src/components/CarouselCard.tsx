@@ -17,7 +17,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
     };
 
     return (<motion.div
-        className="drop-shadow-lg grid bg-red-400 rounded-3xl p-3"
+        className="drop-shadow-lg grid bg-red-400 rounded-3xl p-3 hover:cursor-pointer "
         variants={itemVariants}
         initial="center"
         animate={animatedItem}

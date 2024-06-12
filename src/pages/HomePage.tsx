@@ -1,7 +1,7 @@
 
 import Carousel from '../components/Carousel.tsx';
 
-import { projects, work } from '/src/data.json'
+import { projects, work, current } from '/src/data.json'
 
 import CarouselCard from "../components/CarouselCard.tsx";
 import { FaAngleDoubleDown } from "react-icons/fa";
@@ -87,9 +87,27 @@ function HomePage() {
                 <h1 className="text-5xl m-10 text-center">Brendan Musick <br /><span className='text-gray-800 animate-pulse'>Full Stack Developer</span></h1>
                 <Link 
                     className="animate-bounce absolute bottom-20 w-10 h-10 mb-5"
-                    to={{pathname: `/`, hash:'personal'}}
+                    to={{pathname: `/`, hash:'current'}}
                 >
                     <FaAngleDoubleDown className={`w-10 h-10 ${location.hash == '' && !userScrolled ? '':'hidden'}`} />
+                </Link>
+            </div>
+            <div className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex flex-col justify-center items-center relative text-white" id="current">
+                <Carousel 
+                    items={current} 
+                    itemVariants={projectVariants} 
+                    itemLocations={positions}
+                    itemStyle={projectStyle}
+                    indices={indices}
+                    carouselTitle="Current"
+                    CarouselItem={CarouselCard}
+                    modalAction={handleModalOpen}
+                />
+                <Link 
+                    className={`animate-bounce absolute bottom-20 w-10 h-10 mb-5  ${location.hash == '#personal' && !scrolledPastProjects ? '':'hidden'}`}
+                    to={{pathname: `/`, hash:'enterprise'}}
+                >
+                    <FaAngleDoubleDown className={`w-10 h-10`} />
                 </Link>
             </div>
             <div className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex flex-col justify-center items-center relative text-white" id="personal">
@@ -99,7 +117,7 @@ function HomePage() {
                     itemLocations={positions}
                     itemStyle={projectStyle}
                     indices={indices}
-                    carouselTitle="Personal"
+                    carouselTitle="Complete"
                     CarouselItem={CarouselCard}
                     modalAction={handleModalOpen}
                 />

@@ -6,6 +6,38 @@
         "markdown-blog.md",
         "react-query.md"
     ],
+    "current": [
+        {
+            "name": "Biopython Visualizer",
+            "github": "",
+            "images": [
+                "home.jpg",
+                "register.jpg",
+                "login.jpg",
+                "entrez.jpg",
+                "file-upload.jpg",
+                "add-sequence.jpg",
+                "motif.jpg",
+                "nucleotide-count.jpg",
+                "translate.jpg"
+            ],
+            "imagePath": "/imgs/biopython_visualizer/",
+            "captions": [
+                "Home 'hero' page which gives information about the website and important links. 3D animation of DNA in the background build using ThreeJS.",
+                "Register where user can create an account, they can thus use the Entrez Api (which uses their email) and store sequences.",
+                "Login page where user can login to begin using the websites features. Used jwt authorization in the Django api.",
+                "Incorporated the entrez api where the user uses their email to fetch data from this api (this is programmed using Biopythons entrez tools in the Django api).",
+                "User can upload a file (FASTA or GENBANK) and on the backend it will parse out the data using Biopython tools, returning a list of sequences parsed out. These data items can then be saved for later use.",
+                "Users can use the form to manually input their own sequences for use and access them later.",
+                "There is a motif finder which uses a DNA viewer to show on the sequence where these motifs are found. This is a 3D viewer programmed with React-ThreeJS-Fiber.",
+                "Implemented a nucleotide count calculation and associated bar graph (built using ChartJS).",
+                "Programmed a visualization for uploading a DNA sequence and getting the associated translation to protein."
+            ],
+            "hoverInfo": "",
+            "categories":["django", "react", "biopython", "threeJS", "chartJS"],
+            "classes": "flex justify-center !text-white", "childClasses": "" 
+        }
+    ],
     "projects": [
         {
             "name": "Fitness App",
