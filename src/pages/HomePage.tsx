@@ -7,15 +7,12 @@ import CarouselCard from "../components/CarouselCard.tsx";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import Modal from '../components/Modal.tsx';
 import { useState } from 'react';
 import { Project } from '../lib/types';
-import ProjectGallery from '../views/ProjectGallery';
 
 function HomePage() {
     const [userScrolled, setUserScrolled] = useState(false);
     const [scrolledPastProjects, setScrolledPastProjects] = useState(false);
-    const [showModal, setShowModal] = useState(false);
     const [modalContent, setModalContent] = useState<Project>({} as Project);
 
     const location = useLocation();
@@ -26,8 +23,8 @@ function HomePage() {
         left2: { x: "-50%", scale: 0.5, zIndex: 2, skewY: "15deg" },
         right2: { x: "50%", scale: 0.5, zIndex: 2, skewY: "-15deg" },
         right1: { x: "36%", scale: 0.7, zIndex: 3, skewY: "-10deg" },
-
     }
+
     const positions = [
         "center",
         "left1",
@@ -47,25 +44,9 @@ function HomePage() {
 
     const handleModalOpen = (modalValue:Project) => {
         setModalContent(modalValue);
-        setShowModal(true);
+        location.state.modalContent = modalValue;
+        location.state.previousLocation = location;
     }
-
-    const handleModalClose = () => {
-        setShowModal(false);
-    }
-
-    const actionBar = ""
-
-    const modal = <Modal 
-                    classes={modalContent.classes} 
-                    childClasses={modalContent.childClasses} 
-                    className="z-[0]" 
-                    onClose={handleModalClose} 
-                    actionBar={actionBar}
-                    >
-        {/* receive children prop in Modal */}
-        <ProjectGallery modalContent={modalContent}/>
-    </Modal>;
 
     return (
         <main className="w-full">
@@ -110,7 +91,15 @@ function HomePage() {
                     <FaAngleDoubleDown className={`w-10 h-10`} />
                 </Link>
             </div>
-            <div className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex flex-col justify-center items-center relative text-white" id="personal">
+            <div className="h-screen 
+                    bg-gradient-to-br 
+                    dark:from-cyan-900 
+                    dark:to-gray-900 
+                    from-cyan-700 
+                    to-blue-900 
+                    flex 
+                    flex-col 
+                    justify-center items-center relative text-white" id="personal">
                 <Carousel 
                     items={projects} 
                     itemVariants={projectVariants} 
@@ -128,7 +117,7 @@ function HomePage() {
                     <FaAngleDoubleDown className={`w-10 h-10`} />
                 </Link>
             </div>
-            <div className="h-screen bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900 flex justify-center items-center" id="enterprise">
+            <div className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex justify-center items-center" id="enterprise">
                 <Carousel
                     items={work}
                     itemVariants={projectVariants}
@@ -140,7 +129,6 @@ function HomePage() {
                     modalAction={handleModalOpen}
                 />
             </div>
-            {showModal && modal}
         </main>
     )
 }
