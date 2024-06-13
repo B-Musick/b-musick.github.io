@@ -31,7 +31,11 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
             onHoverStart={()=>setShowHoverInfo(true)}
             onHoverEnd={()=>setShowHoverInfo(false)}
         >
-  
+            <Link
+                    to={`/project/${item.name.toLowerCase().split(' ').join('-')}`}
+                    state={{previousLocation:location, modalContent: item}}
+                    className="absolute w-full h-full z-[22]"
+                    ></Link>
             {showHoverInfo && <div className="opacity-75 absolute w-full h-full bg-black rounded-3xl hover:brightness-[25%] cursor-pointer">
             
             </div>}
@@ -42,11 +46,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ item, itemVariants, animate
             <div className="self-start justify-self-end flex text-3xl z-[2]">
                 {/* TODO: add information button */}
                 {/* <a href={item.info}><FaInfoCircle /></a> */}
-                <Link
-                    to={`/project/${item.name.toLowerCase().split(' ').join('-')}`}
-                    state={{previousLocation:location, modalContent: item}}
-
-                    ><GrGallery className="mr-2"/></Link>
+                <GrGallery className="mr-2"/>
                 <a href={github} className={github ? 'visible z-[3]' : 'hidden'}><FaGithub className="mr-2 z-[1]" /></a>
                 <a href={website} className={website ? 'visible z-[3]': 'hidden'}><TbWorld /></a>
             </div>
