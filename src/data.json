@@ -227,7 +227,9 @@
                 "add-sequence.jpg",
                 "motif.jpg",
                 "nucleotide-count.jpg",
-                "translate.jpg"
+                "translate.jpg",
+                "uniprot.png",
+                "uniprot-motif.png"
             ],
             "imagePath": "/imgs/biopython_visualizer/",
             "captions": [
@@ -240,7 +242,9 @@
                 "Users can use the form to manually input their own sequences for use and access them later.",
                 "There is a motif finder which uses a DNA viewer to show on the sequence where these motifs are found. This is a 3D viewer programmed with React-ThreeJS-Fiber.",
                 "Implemented a nucleotide count calculation and associated bar graph (built using ChartJS).",
-                "Programmed a visualization for uploading a DNA sequence and getting the associated translation to protein."
+                "Programmed a visualization for uploading a DNA sequence and getting the associated translation to protein.",
+                "(In progress)Added route called 'Uniprot' where user can supply multiple accession numbers, which once submitted will be sent to the Django API which will call the third party uniprot API and retreive the protein data. In this 'Add Protein' section, this data can then be saved by selecting which ones are wanted to be saved.",
+                "(In progress) In the 'Motif' section, the user can then use proteins which they have saved, select the green upload button and it will populate the input on top (or they can manually enter their own). Then a motif like 'N{P}[ST]{P}' can be added to look for this specific pattern, and it will return the count of how many times it is found (133 in this case)."
             ],
             "hoverInfo": "",
             "categories":["django", "react", "biopython", "threeJS", "chartJS"],
