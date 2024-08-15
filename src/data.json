@@ -218,6 +218,7 @@
                 "register.jpg",
                 "login.jpg",
                 "entrez.jpg",
+                "entrez-info.png",
                 "file-upload.jpg",
                 "add-sequence.jpg",
                 "motif.jpg",
@@ -230,6 +231,7 @@
                 "Register where user can create an account, they can thus use the Entrez Api (which uses their email) and store sequences.",
                 "Login page where user can login to begin using the websites features. Used jwt authorization in the Django api.",
                 "Incorporated the entrez api where the user uses their email to fetch data from this api (this is programmed using Biopythons entrez tools in the Django api).",
+                "User can click on the listed items returned and view a detailed description of the genetic sequence and associated organism data which has been parsed out",
                 "User can upload a file (FASTA or GENBANK) and on the backend it will parse out the data using Biopython tools, returning a list of sequences parsed out. These data items can then be saved for later use.",
                 "Users can use the form to manually input their own sequences for use and access them later.",
                 "There is a motif finder which uses a DNA viewer to show on the sequence where these motifs are found. This is a 3D viewer programmed with React-ThreeJS-Fiber.",
@@ -395,6 +397,8 @@
             "website": "",
             "images": [
                 "protec_logo.png",
+                "amendments.png",
+                "discontinue-parts.png",
                 "active.png",
                 "print.png",
                 "return-supplier.png",
@@ -403,6 +407,8 @@
             "imagePath": "/imgs/protec/",
             "captions": [
                 "Company based in Winkler which me and another friend/coworker have developed their ERP system.",
+                "Added the ability to amend purchase orders, storing and showing which user made the update, when they made it and what changes they made",
+                "Implemeted the ability for a user to discontinue a part. This involved adding a discontinue button, new column to the database model, and a filter for the sql query to either query all the active or discontinued parts based on the selection.",
                 "I implemented a button to archive projects in the projects form. Then in the main view where all projects are viewed, the use can filter between active and archived projects with the shown toggle button.",
                 "Implemented more structure print out of purchase orders, encorporating their logo, address, tabled data.",
                 "The client was looking to include the ability to return parts to supplier, so I implemented the ability to create a new purchase order which they could add parts to and return the parts.",
