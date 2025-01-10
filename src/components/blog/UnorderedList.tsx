@@ -4,7 +4,7 @@ const UnorderedList = ({children, blogId})=>{
             <ul className="w-full text-md font-bold">
                 {children.map((item, index)=>{
                     let listItem = `${index}. ${item.props.children[0]}`
-                    return <a key={index} className="!text-sky-600 hover:!text-sky-400" href={`#/blog/${blogId}/#${item.props.children[0].toLowerCase().split(' ').join('-')}`}><li>{listItem}</li></a>   
+                    return <a key={index} className="!text-sky-600 hover:!text-sky-400" href={`/blog/${blogId}/${item.props.children[0].toLowerCase().split(' ').join('-')}`}><li>{listItem}</li></a>   
                 })}
             </ul>
         </nav>
