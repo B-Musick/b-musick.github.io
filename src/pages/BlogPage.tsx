@@ -22,7 +22,7 @@ function BlogPage(){
     
     return (
         <main className="w-full h-full">
-            <div className="h-screen font-lobster text-teal-200 flex pt-28 justify-around overflow-scroll flex-wrap p-10">
+            <div className="h-screen flex flex-col pt-28 justify-around overflow-scroll justify-center items-center w-full">
                 {blogs}
             </div>
         </main>
