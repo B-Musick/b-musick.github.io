@@ -8,10 +8,10 @@ const BlogCard: React.FC<BlogCardProps> = ({metadata, classes}) => {
 
     return (
         <div className={classNames}>
-            <div className="w-[700px] flex">
-                <img className='rounded-l-[20px] w-[30%] h-[150px]' src={metadata.image}></img>
+            <div className="w-[90vw] md:w-[700px] flex h-[170px]">
+                <img className='rounded-l-[20px] w-[30%] h-full' src={metadata.image}></img>
                 <div className='w-[70%]'>
-                    <div className="text-2xl w-full bg-white text-center p-2 border">
+                    <div className="text-2xl w-full bg-white text-center p-2 border text-base md:text-xl">
                         {metadata.title}
                     </div>
                     <div className='flex flex-row justify-between px-2'>
