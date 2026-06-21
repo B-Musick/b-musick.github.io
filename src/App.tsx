@@ -6,14 +6,13 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage.tsx";
 import BlogShowPage from "./pages/BlogShowPage.tsx";
 import ResumePage from "./pages/ResumePage.tsx";
 import NavigationBar from "./components/NavigationBar.tsx";
 import Socials from "./components/Socials.tsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ThemeContext } from "./context/ThemeContext.tsx";
 import Home from "./pages/Home.tsx";
 
@@ -23,13 +22,13 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ isLight, setIsLight }}>
-      <div className={`h-screen w-full ${!isLight && "dark"}`}>
+      <div className={`min-h-screen w-full ${!isLight && "dark"} `}>
         <div
           className={`
-          h-full
+          min-h-screen
           flex 
           justify-center 
-          bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900`}
+          bg-gradient-to-br from-white to-gray-200 dark:from-cyan-900 dark:to-gray-900 dark:text-white text-slate-900`}
         >
           <NavigationBar />
           <Socials

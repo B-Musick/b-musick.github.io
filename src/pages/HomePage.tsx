@@ -1,8 +1,5 @@
-import Carousel from "../components/Carousel.tsx";
-
 import { projects, work, current } from "/src/data.json";
 
-import CarouselCard from "../components/CarouselCard.tsx";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -58,10 +55,7 @@ function HomePage() {
         className="
                     h-screen 
                     bg-gradient-to-br 
-                    dark:from-cyan-900 
-                    dark:to-gray-900 
-                    from-cyan-700 
-                    to-blue-900 
+                
                     font-lobster 
                     text-teal-200 
                     flex 
@@ -86,7 +80,7 @@ function HomePage() {
         </Link>
       </div>
       <div
-        className="h-screen bg-gradient-to-bl dark:from-gray-900 dark:to-cyan-900 from-blue-900 to-cyan-700 flex flex-col justify-center items-center relative text-white"
+        className="h-screen bg-gradient-to-bl flex flex-col justify-center items-center relative text-white"
         id="current"
       >
         <Carousel

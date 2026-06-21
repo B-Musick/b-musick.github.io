@@ -10,8 +10,6 @@ function NavigationBar() {
   const location = useLocation();
   const { isLight, setIsLight } = useContext(ThemeContext);
 
-  const workButtons = useRef(null);
-
   const links = [
     { label: "About", path: "/about" },
     { label: "Resume", path: "/resume" },

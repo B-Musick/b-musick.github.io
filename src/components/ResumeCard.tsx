@@ -39,7 +39,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({ job, children, classes }) => {
 
   return (
     <div
-      className={`flex flex-col text-white hover:bg-white/5 p-4 rounded-md ${classes}`}
+      className={`flex flex-col hover:bg-white/5 p-4 rounded-md ${classes} text-slate-900 dark:text-white`}
     >
       <div className="flex pl-4 flex-wrap w-full">
         <div className="w-full text-lg flex justify-between">
@@ -47,7 +47,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({ job, children, classes }) => {
 
           <div className="col-span-1 flex pt-1">
             <span className="px-2">{startMonth}</span>
-            <hr className="w-4 mt-4" />
+            <hr className="w-4 mt-4 border-slate-500 dark:border-white" />
             <span className="pl-2">{endMonth}</span>
             <span className="px-1">{endYear}</span>
           </div>

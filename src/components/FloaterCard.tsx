@@ -3,7 +3,7 @@ import { FloaterCardProps } from "../lib/types";
 
 const FloaterCard: React.FC<FloaterCardProps> = ({ skill }) => {
   return (
-    <p className="flex items-center font-bold px-2 my-1 rounded-full bg-black text-white w-fit mr-1">
+    <p className="text-xs flex items-center font-bold px-2 my-1 rounded-full bg-green-300 text-white w-fit mr-1">
       {skill}
     </p>
   );

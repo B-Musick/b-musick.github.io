@@ -1,10 +1,11 @@
+import Heading from "../components/Heading";
 import ResumeCard from "../components/ResumeCard";
 import jobs from "../data/jobs.json";
 
 function ResumePage() {
   return (
-    <div className="py-36 w-full font-roboto text-teal-200 flex justify-center flex-col items-center absolute bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900">
-      <h1>Brendan Musick's Resume</h1>
+    <div className="min-h-screen py-36 w-full flex justify-center flex-col items-center">
+      <Heading level={1} text="Brendan Musick's Resume" />
 
       <div className="flex flex-col items-center max-w-[1200px]">
         {jobs.map((job, index) => (
