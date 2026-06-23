@@ -1,6 +1,4 @@
-// export const enum Link {
-//     OnOrder,
-//     InInventory,
-//     AtJob,
-//     Deleted,
-// }
+export enum DisplayCardOrientation {
+  Vertical,
+  Horizontal,
+}

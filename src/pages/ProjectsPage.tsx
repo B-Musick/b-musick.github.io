@@ -1,17 +1,23 @@
-import ProjectCard from "../components/ProjectCard";
-import { projects, work, current } from "/src/data/projects.json";
+import { projects } from "../data/projects.json";
+import DisplayCard from "../components/DisplayCard";
+import { DisplayCardOrientation } from "../lib/enums";
 
-export default function ProjectPage() {
-  const items = projects.map((project: any, index: number) => {
-    console.log(project);
-    return <ProjectCard data={project} key={index} />;
-  });
-
+function BlogPage() {
   return (
-    <main>
-      <div className="min-h-screen py-36 w-[95%] flex justify-center items-center flex-wrap gap-5">
-        {items}
+    <main className="w-full h-full">
+      <div className="h-screen flex flex-col pt-28 overflow-scroll items-center w-full">
+        {projects.map((project) => (
+          <DisplayCard
+            key={project.slug}
+            item={project}
+            baseUrl="projects"
+            orientation={DisplayCardOrientation.Vertical}
+            isResponsive={false}
+          />
+        ))}
       </div>
     </main>
   );
 }
+
+export default BlogPage;
