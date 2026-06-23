@@ -1,12 +1,12 @@
-import { blogFiles } from "../data/blogs.json";
-import BlogCard from "../components/BlogCard";
+import { projects } from "../data/projects.json";
+import ProjectCard from "../components/ProjectCard";
 
 function BlogPage() {
   return (
     <main className="w-full h-full">
       <div className="h-screen flex flex-col pt-28 overflow-scroll items-center w-full">
-        {blogFiles.map((blog) => (
-          <BlogCard key={blog.slug} blog={blog} />
+        {projects.map((project) => (
+          <ProjectCard key={project.slug} data={project} />
         ))}
       </div>
     </main>

@@ -11,8 +11,10 @@ function NavigationBar() {
   const { isLight, setIsLight } = useContext(ThemeContext);
 
   const links = [
+    { label: "Home", path: "/" },
     { label: "About", path: "/about" },
     { label: "Resume", path: "/resume" },
+    { label: "Projects", path: "/projects" },
     { label: "Blog", path: "/blog" },
   ];
 
@@ -28,15 +30,14 @@ function NavigationBar() {
   });
 
   return (
-    <nav className="flex text-sm items-center p-2 m-10 rounded-full bg-white/5 fixed w-fit z-[10] text-white backdrop-opacity-95 backdrop-invert">
-      <NavigationBarLink classes="group" link={{ label: "Work", path: "/" }} />
+    <nav className="flex text-xs md:text-sm items-center p-1 m-10 rounded-full bg-white/5 fixed w-fit z-[10] text-white backdrop-opacity-95 backdrop-invert">
       <div
         className={`flex max-[500px]:hidden sm:flex-row ${location.pathname == "/" ? "" : "hidden"}`}
       ></div>
 
       {renderedLinks}
       <button
-        className="rounded-full p-2 m-2 hover:bg-slate-400"
+        className="rounded-full p-1 md:p-2 m-2 hover:bg-slate-400"
         onClick={() => setIsLight(!isLight)}
       >
         {isLight ? <MdDarkMode /> : <MdLightMode />}

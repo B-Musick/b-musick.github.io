@@ -15,6 +15,9 @@ import Socials from "./components/Socials.tsx";
 import { useState } from "react";
 import { ThemeContext } from "./context/ThemeContext.tsx";
 import Home from "./pages/Home.tsx";
+import ProjectPage from "./pages/ProjectsPage.tsx";
+import ProjectShowPage from "./pages/ProjectShowPage.tsx";
+import ErrorPage from "./pages/404.tsx";
 
 export default function App() {
   const [isLight, setIsLight] = useState(true);
@@ -50,9 +53,15 @@ export default function App() {
               <Route index={true} element={<BlogPage />} />
               <Route index={false} path=":blogId" element={<BlogShowPage />} />
             </Route>
-            {/* {Object.keys(modalContent).length > 0 && (
-              <Route path="/project/:id" element={} />
-            )} */}
+            <Route path="/projects">
+              <Route index={true} element={<ProjectPage />} />
+              <Route
+                index={false}
+                path=":projectId"
+                element={<ProjectShowPage />}
+              />
+            </Route>
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>
       </div>

@@ -1,0 +1,41 @@
+{
+  "blogFiles": [
+    {
+      "filename": "biopython-ui.md",
+      "slug": "biopython-ui",
+      "title": "Biopython UI",
+      "image": "public/imgs/biopython.png",
+      "overview": "Implementing react UI with Django Api accessing Biopython functions",
+      "date": "2026-01-01",
+      "categories": ["react", "django", "biopython", "programming"]
+    },
+    {
+      "filename": "framer-motion.md",
+      "slug": "framer-motion",
+      "title": "Framer Motion Basics",
+      "image": "public/imgs/framer-motion.png",
+      "date": "2026-01-02"
+    },
+    {
+      "filename": "github-pages.md",
+      "slug": "github-pages",
+      "title": "Deploying with GitHub Pages",
+      "image": "public/imgs/gh-pages.png",
+      "date": "2026-01-03"
+    },
+    {
+      "filename": "markdown-blog.md",
+      "slug": "markdown-blog",
+      "title": "Markdown Blog System",
+      "image": "public/imgs/markdown.png",
+      "date": "2026-01-04"
+    },
+    {
+      "filename": "react-query.md",
+      "slug": "react-query",
+      "title": "React Query Guide",
+      "image": "public/imgs/react-query.png",
+      "date": "2026-01-05"
+    }
+  ]
+}

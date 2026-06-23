@@ -1,20 +1,19 @@
 import { useParams } from "react-router-dom";
 import MarkdownViewer from "../components/MarkdownViewer";
-import { blogFiles } from "../data/blogs.json";
+import { projects } from "../data/projects.json";
 
 export default function BlogShowPage() {
-  const { blogId } = useParams();
-
-  const url = blogId ? `/blogs/${blogId}.md` : "";
+  const { projectId } = useParams();
+  const url = projectId ? `/projects/${projectId}.md` : "";
 
   return (
     <div className="flex justify-center">
       <div className="max-w-[900px] w-full">
         <MarkdownViewer
           markdownUrl={url}
-          slug={blogId}
-          files={blogFiles}
-          baseUrl={"blogs"}
+          slug={projectId}
+          files={projects}
+          baseUrl={"projects"}
         />
       </div>
     </div>
