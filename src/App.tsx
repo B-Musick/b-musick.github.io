@@ -18,6 +18,7 @@ import Home from "./pages/Home.tsx";
 import ProjectPage from "./pages/ProjectsPage.tsx";
 import ProjectShowPage from "./pages/ProjectShowPage.tsx";
 import ErrorPage from "./pages/404.tsx";
+import ComputerSciencePage from "./pages/ComputerSciencePage.tsx";
 
 export default function App() {
   const [isLight, setIsLight] = useState(true);
@@ -61,6 +62,7 @@ export default function App() {
                 element={<ProjectShowPage />}
               />
             </Route>
+            <Route path="/computer-science" element={<ComputerSciencePage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </div>

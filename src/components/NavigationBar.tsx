@@ -30,7 +30,7 @@ function NavigationBar() {
   });
 
   return (
-    <nav className="flex text-xs md:text-sm items-center p-1 m-10 rounded-full bg-white/5 fixed w-fit z-[10] text-white backdrop-opacity-95 backdrop-invert">
+    <nav className="flex text-xs md:text-sm items-center p-1 m-10 rounded-full fixed w-fit z-[10] text-white backdrop-opacity-99 text- backdrop-invert">
       <div
         className={`flex max-[500px]:hidden sm:flex-row ${location.pathname == "/" ? "" : "hidden"}`}
       ></div>

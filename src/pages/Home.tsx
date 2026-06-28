@@ -28,7 +28,7 @@ export default function Home() {
         />
         <BottomCard
           classes="flex-1"
-          url="/projects"
+          url="/computer-science"
           imageUrl="/imgs/icons/umanitoba.svg"
           title="Computer Science Major"
           description="I graduated with a Computer Science Degree in 2022. Learn more about my time at University."

@@ -1,60 +1,33 @@
 {
   "projects": [
     {
-      "filename": "fitness-app.md",
-      "slug": "fitness-app",
-      "title": "Fitness App",
-      "name": "Fitness App",
+      "filename": "ucn-website.md",
+      "slug": "ucn-website",
+      "title": "University College of the North Website",
+      "name": "University College of the North Website",
+      "github": "",
+      "overview": "",
+      "categories": ["react", "php", "html", "css", "nodejs"],
+      "classes": "flex justify-center !text-white"
+    },
+    {
+      "filename": "protec-erp.md",
+      "slug": "protec-erp",
+      "title": "Protec ERP Software",
+      "name": "Protec ERP Software",
+      "github": "",
+      "overview": "Client based out of Winkler for whom I co-developed an ERP system for. This includes capabilities for keeping track of parts, inventory, purchase orders and customers.",
+      "categories": ["vueJS", "php", "laravel", "mysql"]
+    },
+    {
+      "filename": "lume-assistant.md",
+      "slug": "lume-assistant",
+      "title": "Lume Assistant Software User Interface",
+      "name": "Lume Assistant Software User Interface",
       "github": "",
       "overview": "Android application developed using an Agile approach along wth 4 other group members in a Software Engineering course. This app tracks workouts, meals and calories of user to improve their fitness.",
       "categories": ["android", "java", "kotlin", "xml", "sql"],
       "classes": "flex justify-center !text-white"
-    },
-    {
-      "filename": "matrix-calculator.md",
-      "slug": "matrix-calculator",
-      "title": "Matrix Calculator",
-      "name": "Matrix Calculator",
-      "github": "https://github.com/B-Musick/matrix-calculator-rebuild-react",
-      "website": "https://b-musick.github.io/matrix-calculator-rebuild-react/",
-      "images": [
-        "start_page.png",
-        "matrix_size.png",
-        "matrix_vals.png",
-        "submitted.png",
-        "row_operations.png",
-        "cofactor.png"
-      ],
-      "imagePath": "/imgs/matrix_calculator/",
-      "captions": [
-        "When page first loads, the user needs to put in the amount of matrices they will be working with.",
-        "The next screen will then ask for the dimensions of the matrices.",
-        "Finally, the values of the matrices will be input.",
-        "Once submitted, you are redirected to a screen showing your matrices, a text box to submit certain calculations and on the bottom of the screen is descriptions of commands to input in the text box to perform various types of matrix calculations.",
-        "Typing AR will bring the user to a screen where they can perform various Gaussian and Gauss-Jordan row operations on the matrices, and the elementary matrices can be shown or not.",
-        "If the user types in AC, then a cofactor calculator comes up to perform minor, cofactor and determinate calculations."
-      ],
-      "hoverInfo": "Matrix calculator developed in React to manipulate matrices and perform various calculations on them. This is useful to confirm hand calculations.",
-      "categories": ["react"],
-      "classes": "text-white",
-      "childClasses": "text-white"
-    },
-    {
-      "filename": "rooted-in-nature.md",
-      "slug": "rooted-in-nature",
-      "title": "Rooted In Nature",
-      "github": "https://github.com/B-Musick/sqr_rooted_in_nature",
-      "website": "",
-      "hoverInfo": "Website I developed to host a variey of different functions, including being used as a plant collection database where users can store and view plants they collected and info about them. I also contains interactive plant keys where users navigate binomial keys interactively to id plants they find.",
-      "categories": [
-        "javascript",
-        "html",
-        "css",
-        "nodejs",
-        "mongoDB",
-        "express",
-        "mvc"
-      ]
     },
     {
       "filename": "biopython-visualizer.md",

@@ -51,3 +51,30 @@ https://stackoverflow.com/questions/71984401/react-router-not-working-with-githu
   - Name main image the same name as folder
   - Add any subsequent images as well in the blog here
 - Markdown file is added to 'public/blogs'
+
+# Components in markdown file
+
+- Need to ensure you add the component to the overrides first:
+
+```
+        <Markdown
+          className="w-full p-5"
+          options={{
+            wrapper: "article",
+            overrides: {
+              h1: { component: Header },
+              h2: { component: SubHeader },
+              h3: { component: SubSubHeader },
+              p: { component: Paragraph },
+              blockquote: { component: Blockquote },
+              code: { component: Code },
+              WrappedImageText: {
+                component: WrappedImageText,
+              },
+              // ul: { component: UnorderedList, props: { blogId: params.blogId } },
+            },
+          }}
+        >
+          {postText}
+        </Markdown>
+```
