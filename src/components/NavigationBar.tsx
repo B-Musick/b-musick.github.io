@@ -15,7 +15,7 @@ function NavigationBar() {
     { label: "About", path: "/about" },
     { label: "Resume", path: "/resume" },
     { label: "Projects", path: "/projects" },
-    { label: "Blog", path: "/blog" },
+    { label: "Blog", path: "/blogs" },
   ];
 
   const renderedLinks = links.map((link) => {

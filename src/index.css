@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#blog-content a {
+#card-content a {
     color: rgb(47, 136, 180)
 }
 

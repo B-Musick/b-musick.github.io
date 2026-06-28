@@ -49,7 +49,7 @@ export default function App() {
               <Route index={true} path="/resume" element={<ResumePage />} />
               {/* <Route index={true} path="/blog" element={<BlogPage />} /> */}
             </Route>
-            <Route path="/blog">
+            <Route path="/blogs">
               <Route index={true} element={<BlogPage />} />
               <Route index={false} path=":blogId" element={<BlogShowPage />} />
             </Route>

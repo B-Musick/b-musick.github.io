@@ -31,7 +31,7 @@ export default function DisplayCard({
         >
           <img
             className={`w-full ${isResponsive && "sm:w-[30%]"} h-[200px] object-cover sm:rounded-l-[20px]`}
-            src={item.image}
+            src={`/imgs/${baseUrl}/${item.slug}/${item.slug}.png`}
             alt={item.title}
           />
 

@@ -10,7 +10,7 @@ function BlogPage() {
           <DisplayCard
             key={blog.slug}
             item={blog}
-            baseUrl="blog"
+            baseUrl="blogs"
             orientation={DisplayCardOrientation.Vertical}
             isResponsive={true}
           />

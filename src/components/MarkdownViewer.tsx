@@ -8,9 +8,11 @@ import SubHeader from "../components/blog/SubHeader.tsx";
 import UnorderedList from "../components/blog/UnorderedList.tsx";
 import Blockquote from "../components/blog/Blockquote.tsx";
 import ErrorPage from "../pages/404";
+import matter from "gray-matter";
 
 export default function MarkdownViewer({ slug, files, baseUrl }) {
   const [postText, setPostText] = useState("");
+  const [metadata, setMetadata] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -28,15 +30,21 @@ export default function MarkdownViewer({ slug, files, baseUrl }) {
           setLoading(false);
           return;
         }
-        const response = await fetch(`/${baseUrl}/${fileMeta.filename}`);
+        const file = new Request(`/${baseUrl}/${fileMeta.filename}`);
 
-        if (!response.ok) {
-          setError(true);
-          return;
-        }
+        fetch(file)
+          .then((data) => data.text())
+          .then((text) => {
+            setPostText(text);
+          });
+        // const response = await fetch();
 
-        const text = await response.text();
-        setPostText(text);
+        // if (!response.ok) {
+        //   setError(true);
+        //   return;
+        // }
+
+        // const text = await response.text();
       } catch (err) {
         setError(true);
       } finally {
@@ -55,9 +63,15 @@ export default function MarkdownViewer({ slug, files, baseUrl }) {
   return (
     <div className="absolute left-0 top-0 h-fit w-full flex justify-center bg-gradient-to-br from-cyan-700 to-blue-900 dark:from-cyan-900 dark:to-gray-900">
       <div
-        id="blog-content"
+        id="card-content"
         className="max-w-[1200px] w-full text-[8px] sm:text-sm dark:text-white flex flex-col justify-start sm:m-8 sm:mt-36 dark:bg-white/20 bg-white/85 p-8 md:p-16"
       >
+        <img
+          src={`/imgs/${baseUrl}/${slug}/${slug}.png`}
+          alt="test"
+          className="w-full h-96 bg-black"
+          style={{ borderRadius: "0 0 100% 100%/40px" }}
+        />
         <Markdown
           className="w-full p-5"
           options={{
